@@ -73,10 +73,23 @@
             <strong>42</strong>
           </div>
 
-          <div class="shelf-lines" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
+          <div class="activity-chart" aria-label="Today's activity">
+            <strong>Today&rsquo;s activity</strong>
+            <div class="activity-row">
+              <span>Deliveries</span>
+              <span class="activity-bar delivery" aria-hidden="true"></span>
+              <strong>12</strong>
+            </div>
+            <div class="activity-row">
+              <span>Stock corrections</span>
+              <span class="activity-bar corrections" aria-hidden="true"></span>
+              <strong>7</strong>
+            </div>
+            <div class="activity-row">
+              <span>Expiry checks</span>
+              <span class="activity-bar expiry" aria-hidden="true"></span>
+              <strong>5</strong>
+            </div>
           </div>
 
           <p>
@@ -192,9 +205,12 @@
       </div>
 
       <div class="version-grid">
-        <article class="version-card highlighted">
+        <article class="version-card free-card highlighted">
           <p class="version-label">Always free</p>
-          <h3>EA Free</h3>
+          <div class="version-title-row">
+            <h3>EA Free</h3>
+            <span class="version-status available">Always free</span>
+          </div>
           <p>For one small shop starting with structured stock control.</p>
           <ul>
             <li>1 location</li>
@@ -207,9 +223,12 @@
           </ul>
         </article>
 
-        <article class="version-card">
+        <article class="version-card standard-card featured">
           <p class="version-label">Planned target: October 1, 2026</p>
-          <h3>EA Standard</h3>
+          <div class="version-title-row">
+            <h3>EA Standard</h3>
+            <span class="version-status priority">Priority next</span>
+          </div>
           <p>For small shops that need more serious daily stock workflows.</p>
           <ul>
             <li>2+ small locations</li>
@@ -221,9 +240,12 @@
           </ul>
         </article>
 
-        <article class="version-card">
+        <article class="version-card later-card">
           <p class="version-label">Planned later</p>
-          <h3>Cloud</h3>
+          <div class="version-title-row">
+            <h3>Cloud</h3>
+            <span class="version-status planned">Later</span>
+          </div>
           <p>For shops that later need backup, sync, and safer access to data.</p>
           <ul>
             <li>Not part of the first Early Access focus</li>
@@ -233,9 +255,12 @@
           </ul>
         </article>
 
-        <article class="version-card">
+        <article class="version-card later-card">
           <p class="version-label">Later stage</p>
-          <h3>Pro-Business</h3>
+          <div class="version-title-row">
+            <h3>Pro-Business</h3>
+            <span class="version-status planned">Future</span>
+          </div>
           <p>For larger or more complex retail operations.</p>
           <ul>
             <li>Advanced reports</li>
@@ -260,6 +285,9 @@
             Not sure which version fits your shop? Ask about Early Access, Free and Standard,
             stock transfers, expiry dates, CSV imports, later Cloud plans, or whether the tool fits your type of shop.
           </p>
+          <p class="ask-guidance">
+            Start with the closest prompt. The answer stays focused on the current Early Access plan.
+          </p>
 
           <div class="question-buttons" aria-label="Suggested questions">
             <button type="button" data-question="pet">Is All-G StockMate only for pet shops?</button>
@@ -272,6 +300,7 @@
         </div>
 
         <div class="chat-box" aria-live="polite">
+          <p class="chat-label">Assistant answer</p>
           <div class="chat-message bot">
             <strong>StockMate:</strong>
             <span>Choose a question. I will try to be useful, which is apparently still legal.</span>
@@ -305,6 +334,8 @@
         </div>
 
         <form class="ea-form" id="early-access-form">
+          <p class="form-intro">A short Early Access interest form for future follow-up. This preview stays local for now.</p>
+
           <label>
             Name
             <input type="text" name="name" placeholder="Your name" autocomplete="name" />
@@ -313,6 +344,7 @@
           <label>
             Email
             <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+            <span class="field-hint">Required when real sending is connected later.</span>
           </label>
 
           <label>
