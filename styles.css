@@ -446,6 +446,70 @@ p {
   font-size: 1.13rem;
 }
 
+.problem-layout {
+  display: grid;
+  gap: 1rem;
+}
+
+.problem-callout {
+  margin-top: 1.15rem;
+  padding: 0.9rem 1rem;
+  background: rgba(229, 241, 255, 0.48);
+  border: 1px solid rgba(20, 105, 216, 0.16);
+  border-radius: var(--radius-md);
+}
+
+.problem-callout p {
+  margin-bottom: 0;
+}
+
+.problem-callout .problem-callout-label {
+  margin-bottom: 0.35rem;
+  color: var(--accent-dark);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.problem-snapshot {
+  padding: 1.15rem;
+  background: linear-gradient(180deg, #ffffff, #f5f9fe);
+  border: 1px solid rgba(219, 230, 243, 0.92);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.problem-snapshot h3 {
+  margin-bottom: 0.45rem;
+  color: var(--accent-dark);
+  font-size: 1.02rem;
+}
+
+.problem-snapshot p {
+  margin-bottom: 0.9rem;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+
+.problem-snapshot ul {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.problem-snapshot li {
+  padding: 0.62rem 0.72rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  font-weight: 750;
+}
+
 .text-block p:last-child,
 .two-column p:last-child,
 .feature-card p,
@@ -824,6 +888,22 @@ p {
 
 .site-footer p {
   max-width: 38rem;
+}
+
+@media (min-width: 901px) {
+  #problem {
+    padding-bottom: clamp(2.95rem, 4.7vw, 4.55rem);
+  }
+
+  #problem .problem-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(250px, 0.42fr);
+    gap: 1.45rem;
+    align-items: start;
+  }
+
+  #problem .text-block {
+    max-width: none;
+  }
 }
 
 @media (max-width: 1100px) {
