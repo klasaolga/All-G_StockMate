@@ -1,6 +1,6 @@
 const answers = {
-  pet:
-    "No. The first real-world preset comes from a pet shop, but All-G StockMate is designed for small retail shops in general: pet shops, food shops, specialty stores, boutique retail, and small multi-location shops.",
+  shopTypes:
+    "All-G StockMate is being built for small retail shops that need practical stock control: products, deliveries, batches, expiry dates, low-stock checks, corrections, and transfers between locations. It can fit shops with physical shelves and repeatable stock workflows, whether they sell food, cosmetics, household goods, stationery, accessories, hobby products, or other retail goods.",
   version:
     "If you have one location and want basic stock control, start with EA Free. If you manage 2+ locations, transfers, deliveries, batches, and expiry dates, EA Standard is the better fit.",
   free:
