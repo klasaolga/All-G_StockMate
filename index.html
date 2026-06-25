@@ -338,7 +338,7 @@
       </div>
 
       <div class="two-column form-layout">
-        <div>
+        <div class="early-access-copy">
           <p>
             All-G StockMate is being built with real small shops in mind.
             Early Access is for shop owners, managers, and small retail teams who want a practical stock tool
@@ -352,49 +352,58 @@
             This MVP form does not send data anywhere yet. It only shows how the landing page will work.
             Apparently even forms need a childhood.
           </p>
+          <div class="next-steps">
+            <h3>What happens next</h3>
+            <p>Join the interest list.</p>
+            <p>Try Early Access when it is ready.</p>
+            <p>Share feedback from real small-shop work.</p>
+          </div>
         </div>
 
         <form class="ea-form" id="early-access-form">
           <p class="form-intro">A short Early Access interest form for future follow-up. This preview stays local for now.</p>
 
-          <label>
-            Name
-            <input type="text" name="name" placeholder="Your name" autocomplete="name" />
-          </label>
+          <div class="form-grid">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" autocomplete="name" />
+            </label>
 
-          <label>
-            Email
-            <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
-            <span class="field-hint">Required when real sending is connected later.</span>
-          </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+            </label>
+          </div>
 
-          <label>
-            Shop type
-            <select name="shopType">
-              <option>Food shop</option>
-              <option>Cosmetics shop</option>
-              <option>Household goods shop</option>
-              <option>Stationery shop</option>
-              <option>Specialty shop</option>
-              <option>General retail</option>
-              <option>Boutique retail</option>
-              <option>Other</option>
-            </select>
-          </label>
+          <div class="form-grid">
+            <label>
+              Shop type
+              <select name="shopType">
+                <option>Food shop</option>
+                <option>Cosmetics shop</option>
+                <option>Household goods shop</option>
+                <option>Stationery shop</option>
+                <option>Specialty shop</option>
+                <option>General retail</option>
+                <option>Boutique retail</option>
+                <option>Other</option>
+              </select>
+            </label>
 
-          <label>
-            Number of locations
-            <select name="locations">
-              <option>1</option>
-              <option>2</option>
-              <option>3-5</option>
-              <option>More than 5</option>
-            </select>
-          </label>
+            <label>
+              Number of locations
+              <select name="locations">
+                <option>1</option>
+                <option>2</option>
+                <option>3-5</option>
+                <option>More than 5</option>
+              </select>
+            </label>
+          </div>
 
           <label>
             Biggest stock problem
-            <textarea name="problem" rows="4" placeholder="Low stock, stocktaking, expiry dates, deliveries, CSV chaos..."></textarea>
+            <textarea name="problem" rows="3" placeholder="Low stock, stocktaking, expiry dates, deliveries, CSV chaos..."></textarea>
           </label>
 
           <button class="button primary" type="submit">Join the Early Access list</button>
