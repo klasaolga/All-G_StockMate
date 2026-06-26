@@ -154,6 +154,10 @@ body:not(:has(.main-nav a[aria-current="true"])):has(#early-access:target) .main
   box-shadow: inset 0 -2px 0 rgba(20, 105, 216, 0.28);
 }
 
+#main {
+  scroll-margin-top: 5.25rem;
+}
+
 .section {
   width: min(var(--max-width), calc(100% - 2rem));
   margin: 0 auto;
