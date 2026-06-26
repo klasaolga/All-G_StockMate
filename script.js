@@ -15,6 +15,92 @@ const answers = {
 
 const questionButtons = document.querySelectorAll("[data-question]");
 const answerBox = document.querySelector("#assistant-answer");
+const navLinks = Array.from(document.querySelectorAll(".main-nav a[href^='#']"));
+const navSections = navLinks
+  .map((link) => {
+    const target = document.querySelector(link.getAttribute("href"));
+    return target ? { id: target.id, link, target } : null;
+  })
+  .filter(Boolean);
+
+const setActiveNavLink = (activeId) => {
+  navSections.forEach(({ id, link }) => {
+    if (id === activeId) {
+      link.setAttribute("aria-current", "true");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+};
+
+const updateActiveNavLink = () => {
+  const header = document.querySelector(".site-header");
+  const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
+  const marker = (header?.getBoundingClientRect().height || 0) + Math.min(140, viewportHeight * 0.22);
+  let activeId = "";
+
+  navSections.forEach(({ id, target }) => {
+    const rect = target.getBoundingClientRect();
+
+    if (rect.top <= marker && rect.bottom > marker) {
+      activeId = id;
+    }
+  });
+
+  if (!activeId) {
+    const hashId = window.location.hash.slice(1);
+    const hasHashSection = navSections.some(({ id }) => id === hashId);
+    activeId = hasHashSection ? hashId : "";
+  }
+
+  setActiveNavLink(activeId);
+};
+
+if (navSections.length) {
+  let navTicking = false;
+
+  const scheduleActiveNavUpdate = () => {
+    const schedule =
+      typeof window.requestAnimationFrame === "function" ? window.requestAnimationFrame : window.setTimeout;
+
+    schedule(() => {
+      updateActiveNavLink();
+      navTicking = false;
+    });
+  };
+
+  updateActiveNavLink();
+
+  window.addEventListener("load", () => {
+    updateActiveNavLink();
+    window.setTimeout(updateActiveNavLink, 120);
+  });
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (navTicking) {
+        return;
+      }
+
+      navTicking = true;
+      scheduleActiveNavUpdate();
+    },
+    { passive: true }
+  );
+
+  window.addEventListener("hashchange", () => {
+    scheduleActiveNavUpdate();
+    window.setTimeout(updateActiveNavLink, 160);
+  });
+
+  navSections.forEach(({ id, link }) => {
+    link.addEventListener("click", () => {
+      setActiveNavLink(id);
+      window.setTimeout(updateActiveNavLink, 180);
+    });
+  });
+}
 
 if (answerBox) {
   questionButtons.forEach((button) => {
