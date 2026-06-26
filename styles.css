@@ -139,7 +139,8 @@ body:not(:has(.main-nav a[aria-current="true"])):has(#problem:target) .main-nav 
 body:not(:has(.main-nav a[aria-current="true"])):has(#features:target) .main-nav a[href="#features"],
 body:not(:has(.main-nav a[aria-current="true"])):has(#versions:target) .main-nav a[href="#versions"],
 body:not(:has(.main-nav a[aria-current="true"])):has(#ask:target) .main-nav a[href="#ask"],
-body:not(:has(.main-nav a[aria-current="true"])):has(#early-access:target) .main-nav a[href="#early-access"] {
+body:not(:has(.main-nav a[aria-current="true"])):has(#early-access:target) .main-nav a[href="#early-access"],
+body:not(:has(.main-nav a[aria-current="true"])):has(#faq:target) .main-nav a[href="#faq"] {
   background: rgba(229, 241, 255, 0.72);
   border-color: rgba(20, 105, 216, 0.18);
   color: var(--accent);
@@ -150,7 +151,8 @@ body:not(:has(.main-nav a[aria-current="true"])):has(#problem:target) .main-nav 
 body:not(:has(.main-nav a[aria-current="true"])):has(#features:target) .main-nav a[href="#features"],
 body:not(:has(.main-nav a[aria-current="true"])):has(#versions:target) .main-nav a[href="#versions"],
 body:not(:has(.main-nav a[aria-current="true"])):has(#ask:target) .main-nav a[href="#ask"],
-body:not(:has(.main-nav a[aria-current="true"])):has(#early-access:target) .main-nav a[href="#early-access"] {
+body:not(:has(.main-nav a[aria-current="true"])):has(#early-access:target) .main-nav a[href="#early-access"],
+body:not(:has(.main-nav a[aria-current="true"])):has(#faq:target) .main-nav a[href="#faq"] {
   box-shadow: inset 0 -2px 0 rgba(20, 105, 216, 0.28);
 }
 
@@ -613,6 +615,116 @@ p {
   border-radius: var(--radius-sm);
   font-weight: 800;
 }
+
+.problem-showcase {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  gap: clamp(1.6rem, 4vw, 3rem);
+  align-items: center;
+  padding: clamp(1.7rem, 4vw, 3.25rem);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(229, 241, 255, 0.58));
+  border: 1px solid rgba(180, 208, 242, 0.72);
+  border-radius: calc(var(--radius-lg) + 0.35rem);
+  box-shadow: 0 22px 60px rgba(13, 27, 52, 0.06);
+}
+
+.problem-showcase-copy h2 {
+  max-width: 650px;
+}
+
+.problem-showcase-copy p {
+  max-width: 660px;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.58;
+}
+
+.audience-pills {
+  margin-top: 1.6rem;
+  max-width: 620px;
+}
+
+.audience-pills li {
+  padding: 0.72rem 0.9rem;
+}
+
+.daily-mess-card {
+  padding: clamp(1.35rem, 3vw, 2rem);
+  background: linear-gradient(180deg, #ffffff, #f5f9fe);
+  border: 1px solid rgba(180, 208, 242, 0.78);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.daily-mess-heading {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 1.3rem;
+}
+
+.daily-mess-heading h3 {
+  margin-bottom: 0.45rem;
+  color: var(--accent-dark);
+  font-size: 1.55rem;
+}
+
+.daily-mess-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.daily-mess-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 900;
+}
+
+.daily-mess-icon.small {
+  width: 2.35rem;
+  height: 2.35rem;
+  flex: 0 0 auto;
+}
+
+.daily-mess-list {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.daily-mess-list li {
+  display: flex;
+  gap: 0.85rem;
+  align-items: center;
+  padding: 0.85rem 0.95rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .version-card {
   display: flex;
@@ -1306,7 +1418,8 @@ p {
 }
 
 @media (min-width: 1600px) {
-  .hero {
+  .hero,
+  #problem {
     width: min(1240px, calc(100% - 2rem));
   }
 }
@@ -1316,8 +1429,34 @@ p {
   #features,
   #versions,
   #ask,
-  #early-access {
+  #early-access,
+  #faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     min-height: calc(100svh - 5.2rem);
+  }
+
+  .problem-showcase {
+    gap: clamp(2rem, 4.3vw, 3.5rem);
+    padding: clamp(2rem, 4.3vw, 3.7rem);
+  }
+
+  .problem-showcase-copy p {
+    font-size: 1.12rem;
+    line-height: 1.6;
+  }
+
+  .daily-mess-card {
+    padding: clamp(1.55rem, 3vw, 2.15rem);
+  }
+
+  .daily-mess-heading h3 {
+    font-size: 1.72rem;
+  }
+
+  .daily-mess-list li {
+    padding: 0.95rem 1.05rem;
   }
 }
 
@@ -1331,7 +1470,8 @@ p {
 @media (max-width: 900px) {
   .hero,
   .two-column,
-  .ask-layout {
+  .ask-layout,
+  .problem-showcase {
     grid-template-columns: 1fr;
   }
 
