@@ -66,7 +66,7 @@ textarea {
 }
 
 :focus-visible {
-  outline: 3px solid rgba(20, 105, 216, 0.24);
+  outline: 3px solid rgba(20, 105, 216, 0.75);
   outline-offset: 3px;
 }
 
