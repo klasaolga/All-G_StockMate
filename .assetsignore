@@ -1,0 +1,13 @@
+.git
+.git/**
+.gitignore
+.wrangler
+.wrangler/**
+node_modules
+node_modules/**
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+wrangler.jsonc
