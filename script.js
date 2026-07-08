@@ -4,7 +4,7 @@ const answers = {
   version:
     "If you have one location and want basic stock control, start with EA Free. If you manage 2+ locations, transfers, deliveries, batches, and expiry dates, EA Standard is the better fit.",
   free:
-    "EA Free includes one location, product database, basic stock control, stocktaking and corrections, CSV import/export, basic filters, and a product limit. It will always stay free.",
+    "EA Free includes 1 location, product database, CSV import/export, basic inventory counting, manual stock corrections, basic filters, Local-first use, and up to 2,500 products. It will always stay free.",
   locations:
     "Yes, this is planned for EA Standard. Standard is designed for small retailers that manage 2 or more locations and need to transfer stock between them.",
   dates:
