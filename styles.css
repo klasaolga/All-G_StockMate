@@ -982,7 +982,7 @@ p {
 .ea-form select:focus,
 .ea-form textarea:focus {
   border-color: var(--accent);
-  outline: 3px solid rgba(20, 105, 216, 0.18);
+  outline: 3px solid rgba(20, 105, 216, 0.45);
 }
 
 .form-message {
