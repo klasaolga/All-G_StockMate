@@ -1128,7 +1128,7 @@ p {
 
   .hero-visual {
     margin-bottom: -3rem;
-    margin-right: -1.25rem;
+    margin-right: 0;
     overflow: clip;
     transform: translateY(-48px);
   }
