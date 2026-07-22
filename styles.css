@@ -117,33 +117,22 @@ textarea {
   text-decoration: none;
 }
 
-.brand-symbol {
-  display: block;
-  width: 2.2rem;
-  height: 2.2rem;
-  overflow: hidden;
+.brand-icon {
+  width: 1.875rem;
+  height: 1.875rem;
+  object-fit: contain;
   flex: 0 0 auto;
-  border-radius: 4px;
-}
-
-.brand-symbol-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  /* Crop to show only the top symbol part (infinity mark) of the vertical logo */
-  transform: scale(1.05);
-  transform-origin: top center;
 }
 
 .brand-name {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.01em;
   white-space: nowrap;
 }
 
 .brand-name strong {
-  font-weight: 850;
+  font-weight: 750;
 }
 
 .main-nav {
@@ -350,7 +339,6 @@ p {
 .version-card,
 .ask-panel,
 .chat-box,
-.ea-form,
 .faq-list details {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(219, 230, 243, 0.92);
@@ -624,12 +612,35 @@ p {
 }
 
 .audience-pills {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem 1.5rem;
   margin-top: 1.6rem;
   max-width: 620px;
 }
 
-.audience-pills li {
-  padding: 0.72rem 0.9rem;
+.pill-list.audience-pills li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.3rem 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: none;
+  cursor: default;
+}
+
+.pill-list.audience-pills li::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--accent);
 }
 
 .daily-mess-card {
@@ -664,18 +675,28 @@ p {
 .daily-mess-icon {
   display: inline-grid;
   place-items: center;
-  width: 2.8rem;
-  height: 2.8rem;
-  border-radius: 999px;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: var(--radius-sm);
   background: var(--accent-soft);
   color: var(--accent);
-  font-weight: 900;
+}
+
+.daily-mess-icon svg {
+  width: 1.6rem;
+  height: 1.6rem;
 }
 
 .daily-mess-icon.small {
-  width: 2.35rem;
-  height: 2.35rem;
+  width: 1.8rem;
+  height: 1.8rem;
   flex: 0 0 auto;
+  margin-top: 0.15rem;
+}
+
+.daily-mess-icon.small svg {
+  width: 1rem;
+  height: 1rem;
 }
 
 .daily-mess-list {
@@ -689,14 +710,14 @@ p {
 .daily-mess-list li {
   display: flex;
   gap: 0.85rem;
-  align-items: center;
+  align-items: flex-start;
   padding: 0.85rem 0.95rem;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
   color: var(--text);
-  font-weight: 800;
-  line-height: 1.35;
+  font-weight: 750;
+  line-height: 1.45;
 }
 
 
@@ -916,66 +937,36 @@ p {
   margin-top: 0.45rem;
 }
 
-.ea-form {
-  display: grid;
-  gap: 0.9rem;
-  padding: 1.25rem;
-  border-color: rgba(20, 105, 216, 0.2);
+.early-access-status-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 1.75rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(219, 230, 243, 0.92);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
 }
 
-.form-intro {
-  margin: 0;
-  padding-bottom: 0.95rem;
-  border-bottom: 1px solid var(--line);
+.early-access-status-card h3 {
+  font-size: 1.2rem;
+}
+
+.early-access-status-card p {
   color: var(--muted);
+  line-height: 1.55;
 }
 
-.ea-form .form-grid {
-  display: grid;
-  gap: 0.85rem;
-}
-
-.ea-form label {
-  display: grid;
-  gap: 0.35rem;
-  color: var(--text);
-  font-weight: 850;
-}
-
-.ea-form input,
-.ea-form select,
-.ea-form textarea {
-  width: 100%;
-  padding: 0.85rem 0.9rem;
-  border: 1px solid var(--line);
+.early-access-status-card .status-badge {
+  margin-top: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  background: var(--accent-soft);
   border-radius: var(--radius-sm);
-  background: white;
-  color: var(--text);
-}
-
-.ea-form textarea {
-  min-height: 6rem;
-  resize: vertical;
-}
-
-.ea-form .button {
-  width: 100%;
-}
-
-.ea-form input:focus,
-.ea-form select:focus,
-.ea-form textarea:focus {
-  border-color: var(--accent);
-  outline: 3px solid rgba(20, 105, 216, 0.45);
-}
-
-.form-message {
-  margin: 0;
-  padding: 1rem;
-  background: var(--green-soft);
-  border: 1px solid rgba(20, 105, 216, 0.22);
-  border-radius: var(--radius-sm);
-  color: #0b376f;
+  color: var(--accent-dark);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
 }
 
 .faq-list {
@@ -1027,17 +1018,39 @@ p {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.8rem 1.5rem;
+  justify-content: flex-start;
+  gap: 1.25rem 2rem;
   width: min(var(--max-width), calc(100% - 2rem));
   margin: 0 auto;
-  padding: 2rem 0 3rem;
+  padding: 2.5rem 0 3rem;
   border-top: 1px solid var(--line);
   color: var(--muted);
 }
 
-.site-footer p {
-  max-width: 38rem;
+.footer-brand {
+  flex: 0 0 auto;
+}
+
+.footer-logo {
+  display: block;
+  width: clamp(170px, 16vw, 240px);
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  max-width: 30rem;
+  text-align: left;
+}
+
+.footer-line,
+.footer-status {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
 }
 
 @media (min-width: 901px) {
@@ -1050,15 +1063,11 @@ p {
   .site-header {
     padding-top: 0.68rem;
     padding-bottom: 0.68rem;
+    gap: 1.45rem;
   }
 
   .brand {
     font-size: 1.02rem;
-  }
-
-  .brand-symbol {
-    width: 1.85rem;
-    height: 1.85rem;
   }
 
   .brand-name {
@@ -1105,18 +1114,23 @@ p {
   }
 
   .hero {
-    grid-template-columns: minmax(0, 44fr) minmax(400px, 56fr);
-    gap: clamp(1.75rem, 3vw, 3rem);
+    grid-template-columns: minmax(0, 36fr) minmax(400px, 64fr);
+    gap: clamp(1.5rem, 2.4vw, 2.4rem);
     min-height: calc(100svh - var(--site-header-height));
     padding-top: clamp(0.75rem, 1.5vh, 1.5rem);
     padding-bottom: clamp(1.5rem, 2.8vh, 2.2rem);
     align-items: center;
   }
 
+  .hero-content {
+    transform: translateY(-48px);
+  }
+
   .hero-visual {
-    margin-bottom: -2.5rem;
-    margin-right: -1.5rem;
+    margin-bottom: -3rem;
+    margin-right: -1.25rem;
     overflow: clip;
+    transform: translateY(-48px);
   }
 
   .hero-lead {
@@ -1194,17 +1208,43 @@ p {
     font-size: 0.9rem;
   }
 
+  #features .section-heading,
+  #features .feature-grid {
+    transform: translateY(-25px);
+  }
+
+  #versions {
+    max-width: 1300px;
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+  }
+
+  #versions .section-heading,
+  #versions .version-grid {
+    transform: translateY(-20px);
+  }
+
+  #ask {
+    max-width: 1200px;
+  }
+
+  #ask .ask-layout {
+    transform: translateY(-20px);
+  }
+
   .feature-grid,
   .version-grid {
     gap: 0.78rem;
   }
 
   .feature-card,
-  .version-card,
   .ask-panel,
-  .chat-box,
-  .ea-form {
+  .chat-box {
     padding: 1rem;
+  }
+
+  .version-card {
+    padding: 1.55rem;
   }
 
   .feature-card {
@@ -1217,13 +1257,17 @@ p {
   }
 
   .feature-card p,
-  .version-card p,
-  .version-card li,
   .two-column p,
   .ask-panel p,
   .chat-box,
   .faq-list p {
     font-size: 0.94rem;
+    line-height: 1.48;
+  }
+
+  .version-card p,
+  .version-card li {
+    font-size: 0.98rem;
     line-height: 1.48;
   }
 
@@ -1242,9 +1286,8 @@ p {
     gap: 0.5rem;
   }
 
-  .pill-list li {
-    padding: 0.5rem 0.68rem;
-    font-size: 0.92rem;
+  .audience-pills {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .version-card {
@@ -1295,8 +1338,15 @@ p {
     font-size: 0.9rem;
   }
 
+  .ask-panel,
   .chat-box {
-    min-height: 220px;
+    padding: 1.65rem;
+  }
+
+  .chat-box {
+    min-height: 280px;
+    background: linear-gradient(180deg, #ffffff, #edf6ff);
+    box-shadow: inset 0 2px 12px rgba(20, 105, 216, 0.04);
   }
 
   .chat-label {
@@ -1333,33 +1383,6 @@ p {
     margin-top: 0.28rem;
   }
 
-  .ea-form {
-    gap: 0.68rem;
-  }
-
-  .form-intro {
-    padding-bottom: 0.68rem;
-  }
-
-  .ea-form .form-grid {
-    gap: 0.62rem;
-  }
-
-  .ea-form label {
-    gap: 0.28rem;
-    font-size: 0.92rem;
-  }
-
-  .ea-form input,
-  .ea-form select,
-  .ea-form textarea {
-    padding: 0.66rem 0.72rem;
-  }
-
-  .ea-form textarea {
-    min-height: 5rem;
-  }
-
   .faq-list {
     gap: 0.62rem;
   }
@@ -1370,6 +1393,10 @@ p {
 
   .faq-list p {
     padding-top: 0.55rem;
+  }
+
+  .final-cta {
+    margin-top: -30px;
   }
 
   .final-cta p {
@@ -1383,6 +1410,15 @@ p {
 
   .site-footer {
     padding: 1.45rem 0 2.2rem;
+    align-items: center;
+  }
+
+  .footer-logo {
+    width: clamp(280px, 24vw, 360px);
+  }
+
+  .footer-meta p {
+    font-size: 0.98rem;
   }
 }
 
@@ -1407,18 +1443,28 @@ p {
     min-height: calc(100svh - var(--site-header-height));
   }
 
-  /* Shorter sections: center content vertically */
+  /* Sections whose content typically fits one viewport: center vertically.
+     min-height is a floor, not a cap — content taller than the viewport
+     simply grows the section, making this a no-op when it doesn't fit. */
   #problem,
-  #ask {
-    justify-content: center;
-  }
-
-  /* Longer / content-heavy sections: start from top, natural flow */
+  #ask,
   #features,
   #versions,
   #early-access,
   #faq {
-    justify-content: flex-start;
+    justify-content: center;
+    justify-content: safe center;
+  }
+
+  #faq {
+    padding-bottom: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  /* Pull final CTA closer to FAQ's visual bottom. Scaled to vh so it always
+     stays well inside the centered section's own leftover slack — never
+     overlaps FAQ content, even on shorter full-viewport-qualifying screens. */
+  .final-cta {
+    margin-top: clamp(-3rem, -6vh, -30px);
   }
 
   .problem-showcase {
@@ -1481,11 +1527,6 @@ p {
   }
 }
 
-@media (min-width: 721px) {
-  .ea-form .form-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
 
 @media (max-width: 720px) {
   :root {
@@ -1503,9 +1544,9 @@ p {
     gap: 0.55rem;
   }
 
-  .brand-symbol {
-    width: 1.75rem;
-    height: 1.75rem;
+  .brand-icon {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .brand-name {
@@ -1558,10 +1599,6 @@ p {
     width: 100%;
   }
 
-  .ea-form .button {
-    width: 100%;
-  }
-
   .question-buttons {
     grid-template-columns: 1fr;
   }
@@ -1575,6 +1612,21 @@ p {
   .final-cta {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: clamp(150px, 45vw, 200px);
+  }
+
+  .footer-meta {
+    align-items: center;
+    text-align: center;
   }
 }
 

@@ -130,14 +130,3 @@ if (answerBox) {
     });
   });
 }
-
-const form = document.querySelector("#early-access-form");
-const formMessage = document.querySelector("#form-message");
-
-if (form && formMessage) {
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    formMessage.classList.remove("hidden");
-    form.reset();
-  });
-}
