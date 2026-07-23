@@ -1,4 +1,4 @@
-﻿.legal-main {
+.legal-main {
   width: min(900px, calc(100% - 2rem));
   margin: 0 auto;
   padding: clamp(2.5rem, 6vw, 5rem) 0 3rem;
@@ -100,23 +100,4 @@
   .legal-content {
     padding: 1.15rem;
   }
-}
-
-.site-footer .footer-meta {
-  margin-left: auto;
-  text-align: right;
-  align-items: flex-end;
-}
-
-@media (max-width: 640px) {
-  .site-footer .footer-meta {
-    width: 100%;
-    margin-left: 0;
-    text-align: left;
-    align-items: flex-start;
-  }
-}
-
-.site-footer .footer-logo {
-  width: clamp(150px, 13vw, 200px);
 }
