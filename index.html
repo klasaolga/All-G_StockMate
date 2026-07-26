@@ -60,7 +60,7 @@
         </p>
 
         <div class="hero-actions">
-          <a class="button primary" href="#early-access">Join Early Access</a>
+          <a class="button primary" href="#early-access">Check Early Access status</a>
           <a class="hero-link-secondary" href="#versions">See product versions <span aria-hidden="true">→</span></a>
         </div>
 
@@ -226,7 +226,7 @@
             <h3>EA Free</h3>
             <span class="version-status available">Always free</span>
           </div>
-          <p class="version-date">Planned launch: August 15, 2026</p>
+          <p class="version-date">Public download: Pending signed release</p>
           <p>For one small shop that wants structured local stock control.</p>
           <ul>
             <li>Up to 2,500 products</li>
@@ -335,42 +335,84 @@
 
     <section class="section early-access" id="early-access">
       <div class="section-heading">
-        <p class="eyebrow">Early Access</p>
-        <h2>Join Early Access</h2>
+        <p class="eyebrow">Early Access Free</p>
+        <h2>Early Access Free is coming to Windows.</h2>
       </div>
 
       <div class="two-column form-layout">
         <div class="early-access-copy">
           <p>
-            All-G StockMate is being built with real small shops in mind.
-            Early Access is for shop owners, managers, and small retail teams who want a practical stock tool
-            and are willing to share feedback based on real use.
+            Early Access Free is being prepared as a local application for Windows 10 and Windows 11.
+            It will not require an account. Your shop data will stay on your device, without cloud storage
+            or online synchronization.
           </p>
           <p>
-            EA Free will always stay free. After 30 days, Free users may be invited to complete a feedback survey
-            and receive one year of Standard for free.
+            When a signed and approved package is ready, you will be able to download it directly from this page
+            and use it locally. After 30 days of use, the application will display a local prompt asking for feedback.
           </p>
-          <p class="note">
-            Early Access registration is not open yet.
-          </p>
+
           <div class="next-steps">
-            <h3>What happens next</h3>
-            <p>Join the interest list.</p>
-            <p>Try Early Access when it is ready.</p>
-            <p>Share feedback from real small-shop work.</p>
+            <h3>How Early Access Free will work</h3>
+            <ol class="release-flow">
+              <li>Download the signed package from this page.</li>
+              <li>Use All-G StockMate locally, without an account.</li>
+              <li>Respond to the optional local feedback prompt after 30 days.</li>
+            </ol>
           </div>
         </div>
-        <aside class="early-access-status-card" aria-label="Registration status">
-          <span class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
-          </span>
-          <h3>Registration opens soon</h3>
-          <p>We&rsquo;re preparing the first public Early Access release. Registration will open when the build is ready.</p>
-          <p class="status-badge">Early Access &middot; In development</p>
+        <aside class="early-access-status-card" aria-label="Early Access Free release status">
+          <div class="release-card-heading">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+            </span>
+            <div>
+              <h3>Windows release</h3>
+              <p class="release-summary">The signed Early Access Free package is being prepared.</p>
+            </div>
+          </div>
+
+          <dl class="release-metadata">
+            <div class="release-metadata-row">
+              <dt>
+                <span class="release-metadata-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+                </span>
+                <span>Status</span>
+              </dt>
+              <dd><span class="status-badge" data-release-status aria-live="polite">Coming soon</span></dd>
+            </div>
+            <div class="release-metadata-row" hidden>
+              <dt>Version</dt>
+              <dd data-release-version>Not available yet</dd>
+            </div>
+            <div class="release-metadata-row">
+              <dt>
+                <span class="release-metadata-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+                </span>
+                <span>Platform</span>
+              </dt>
+              <dd data-release-platform>Windows 10/11 &middot; 64-bit</dd>
+            </div>
+            <div class="release-metadata-row" hidden>
+              <dt>File size</dt>
+              <dd data-release-file-size>Not available yet</dd>
+            </div>
+            <div class="release-metadata-row" hidden>
+              <dt>SHA-256</dt>
+              <dd class="release-sha256" data-release-sha256>Not available yet</dd>
+            </div>
+          </dl>
+
+          <button class="button primary release-button" type="button" data-release-action disabled>
+            Download coming soon
+          </button>
+          <p class="release-notes" hidden>
+            Release notes: <span data-release-notes>Not available yet</span>
+          </p>
         </aside>
       </div>
     </section>
-
     <section class="section faq" id="faq">
       <div class="section-heading">
         <p class="eyebrow">FAQ</p>
@@ -424,18 +466,19 @@
         </details>
 
         <details>
-          <summary>Does the Early Access form send my data anywhere?</summary>
+          <summary>How will I download Early Access Free?</summary>
           <p>
-            No. This static MVP only shows the intended form experience. Real sending is not connected yet.
+            A signed and approved package will be available directly on this page. Downloading is not available yet,
+            and no publication date is promised. Early Access Free will not require an account and will run locally.
           </p>
         </details>
       </div>
     </section>
 
     <section class="section final-cta">
-      <h2>Ready to bring some order to your shop stock?</h2>
-      <p>Join Early Access and help shape All-G StockMate for real small retail work.</p>
-      <a class="button primary" href="#early-access">Join Early Access</a>
+      <h2>See when Early Access Free is ready.</h2>
+      <p>Check the release status for the future signed Windows download.</p>
+      <a class="button primary" href="#early-access">Check Early Access availability</a>
     </section>
   </main>
 

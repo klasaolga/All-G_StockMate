@@ -941,8 +941,9 @@ p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.6rem;
-  padding: 1.75rem;
+  align-self: start;
+  gap: 0.85rem;
+  padding: 1.5rem;
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(219, 230, 243, 0.92);
   border-radius: var(--radius-lg);
@@ -959,8 +960,8 @@ p {
 }
 
 .early-access-status-card .status-badge {
-  margin-top: 0.4rem;
-  padding: 0.4rem 0.75rem;
+  margin-top: 0;
+  padding: 0.34rem 0.65rem;
   background: var(--accent-soft);
   border-radius: var(--radius-sm);
   color: var(--accent-dark);
@@ -969,6 +970,132 @@ p {
   letter-spacing: 0.02em;
 }
 
+.early-access-status-card .status-badge.available {
+  background: var(--accent);
+  color: white;
+}
+
+.release-card-heading {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.8rem;
+  align-items: start;
+  width: 100%;
+}
+
+.release-card-heading .feature-icon {
+  width: 2.35rem;
+  height: 2.35rem;
+  margin-bottom: 0;
+}
+
+.release-summary {
+  margin: 0.35rem 0 0;
+}
+
+.release-flow {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding-left: 1.35rem;
+  color: var(--muted);
+}
+
+.release-metadata {
+  display: grid;
+  width: 100%;
+  margin: 0.1rem 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.release-metadata-row {
+  display: grid;
+  grid-template-columns: minmax(9rem, 0.58fr) minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.release-metadata-row[hidden],
+.release-notes[hidden] {
+  display: none !important;
+}
+
+.release-metadata dt {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.release-metadata-icon {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 1.8rem;
+  height: 1.8rem;
+  background: var(--accent-soft);
+  border-radius: var(--radius-sm);
+  color: var(--accent);
+}
+
+.release-metadata-icon svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.release-metadata dd {
+  min-width: 0;
+  margin: 0;
+  color: var(--text);
+  font-weight: 750;
+}
+
+.release-sha256 {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+  font-size: 0.86rem;
+}
+
+.release-button {
+  width: 100%;
+  margin-top: 0.3rem;
+}
+
+.button:disabled {
+  background: var(--accent-soft);
+  border-color: rgba(20, 105, 216, 0.2);
+  box-shadow: none;
+  color: var(--accent-dark);
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.button:disabled:hover {
+  background: var(--accent-soft);
+  border-color: rgba(20, 105, 216, 0.2);
+  box-shadow: none;
+  color: var(--accent-dark);
+  opacity: 1;
+  transform: none;
+}
+
+.release-notes {
+  width: 100%;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.release-notes a {
+  color: var(--accent);
+  font-weight: 800;
+}
 .faq-list {
   display: grid;
   gap: 0.8rem;
@@ -1525,6 +1652,10 @@ p {
     justify-content: center;
     padding: 0.6rem;
   }
+
+  .early-access-status-card {
+    order: -1;
+  }
 }
 
 
@@ -1601,6 +1732,20 @@ p {
 
   .question-buttons {
     grid-template-columns: 1fr;
+  }
+
+  .release-metadata-row {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+
+  .release-metadata dd {
+    justify-self: start;
+    padding-left: 2.4rem;
+  }
+
+  .early-access-status-card {
+    padding: 1.2rem;
   }
 
   .version-title-row {
