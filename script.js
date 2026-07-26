@@ -1,3 +1,121 @@
+const releaseConfig = Object.freeze({
+  status: "coming-soon",
+  version: null,
+  platform: "Windows 10/11 · 64-bit",
+  fileSize: null,
+  sha256: null,
+  downloadUrl: null,
+  releaseNotesUrl: null
+});
+
+const hasText = (value) => typeof value === "string" && value.trim().length > 0;
+
+const isValidHttpsUrl = (value) => {
+  if (!hasText(value)) {
+    return false;
+  }
+
+  try {
+    const parsedUrl = new URL(value);
+    return parsedUrl.protocol === "https:" && Boolean(parsedUrl.hostname);
+  } catch {
+    return false;
+  }
+};
+
+const isValidSha256 = (value) => hasText(value) && /^[a-f0-9]{64}$/i.test(value);
+
+const isReleaseAvailable =
+  releaseConfig.status === "available" &&
+  isValidHttpsUrl(releaseConfig.downloadUrl) &&
+  hasText(releaseConfig.version) &&
+  hasText(releaseConfig.platform) &&
+  hasText(releaseConfig.fileSize) &&
+  isValidSha256(releaseConfig.sha256);
+
+const releaseFields = {
+  status: document.querySelector("[data-release-status]"),
+  version: document.querySelector("[data-release-version]"),
+  platform: document.querySelector("[data-release-platform]"),
+  fileSize: document.querySelector("[data-release-file-size]"),
+  sha256: document.querySelector("[data-release-sha256]"),
+  action: document.querySelector("[data-release-action]"),
+  notes: document.querySelector("[data-release-notes]")
+};
+
+const displayReleaseValue = (value) => (hasText(value) ? value.trim() : "Not available yet");
+
+if (releaseFields.status) {
+  releaseFields.status.textContent = isReleaseAvailable ? "Available" : "Coming soon";
+  releaseFields.status.classList.toggle("available", isReleaseAvailable);
+}
+
+if (releaseFields.version) {
+  releaseFields.version.textContent = displayReleaseValue(releaseConfig.version);
+}
+
+if (releaseFields.platform) {
+  releaseFields.platform.textContent = displayReleaseValue(releaseConfig.platform);
+}
+
+if (releaseFields.fileSize) {
+  releaseFields.fileSize.textContent = displayReleaseValue(releaseConfig.fileSize);
+}
+
+if (releaseFields.sha256) {
+  releaseFields.sha256.textContent = displayReleaseValue(releaseConfig.sha256);
+}
+
+const optionalReleaseFields = [releaseFields.version, releaseFields.fileSize, releaseFields.sha256];
+
+optionalReleaseFields.forEach((field) => {
+  const metadataRow = field?.closest(".release-metadata-row");
+
+  if (metadataRow) {
+    metadataRow.hidden = !isReleaseAvailable;
+  }
+});
+
+if (releaseFields.action) {
+  if (isReleaseAvailable) {
+    const downloadLink = document.createElement("a");
+    downloadLink.className = "button primary release-button";
+    downloadLink.dataset.releaseAction = "";
+    downloadLink.href = releaseConfig.downloadUrl;
+    downloadLink.textContent = `Download Early Access Free ${releaseConfig.version.trim()}`;
+    releaseFields.action.replaceWith(downloadLink);
+  } else {
+    const disabledButton = document.createElement("button");
+    disabledButton.className = "button primary release-button";
+    disabledButton.type = "button";
+    disabledButton.dataset.releaseAction = "";
+    disabledButton.disabled = true;
+    disabledButton.textContent = "Download coming soon";
+    releaseFields.action.replaceWith(disabledButton);
+  }
+}
+
+if (releaseFields.notes) {
+  const releaseNotesContainer = releaseFields.notes.closest(".release-notes");
+
+  if (isValidHttpsUrl(releaseConfig.releaseNotesUrl)) {
+    const releaseNotesLink = document.createElement("a");
+    releaseNotesLink.dataset.releaseNotes = "";
+    releaseNotesLink.href = releaseConfig.releaseNotesUrl;
+    releaseNotesLink.textContent = "View release notes";
+    releaseFields.notes.replaceWith(releaseNotesLink);
+
+    if (releaseNotesContainer) {
+      releaseNotesContainer.hidden = false;
+    }
+  } else {
+    releaseFields.notes.textContent = "Not available yet";
+
+    if (releaseNotesContainer) {
+      releaseNotesContainer.hidden = true;
+    }
+  }
+}
 const answers = {
   shopTypes:
     "All-G StockMate is being built for small retail shops that need practical stock control: products, deliveries, batches, expiry dates, low-stock checks, stock movements, and corrections. It can fit shops with physical shelves and repeatable stock workflows, whether they sell food, cosmetics, household goods, stationery, accessories, hobby products, or other retail goods.",
