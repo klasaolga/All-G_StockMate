@@ -1426,6 +1426,7 @@ p {
     max-width: 1200px;
   }
 
+  #ask .section-heading,
   #ask .ask-layout {
     transform: translateY(-20px);
   }
