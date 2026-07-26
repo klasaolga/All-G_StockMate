@@ -11,3 +11,24 @@ Thumbs.db
 .env
 .env.*
 wrangler.jsonc
+
+# Prevent accidental publication of release and private artifacts
+*.zip
+*.7z
+*.rar
+*.exe
+*.msi
+*.dll
+*.db
+*.sqlite
+*.sqlite3
+*.xlsx
+*.xls
+*.csv
+*.pfx
+*.p12
+*.pem
+*.key
+*.sha256
+*.sha256.txt
+*unsigned*
