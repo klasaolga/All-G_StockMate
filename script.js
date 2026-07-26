@@ -1,10 +1,10 @@
 const releaseConfig = Object.freeze({
-  status: "coming-soon",
-  version: null,
+  status: "available",
+  version: "0.9.0-ea.2",
   platform: "Windows 10/11 · 64-bit",
-  fileSize: null,
-  sha256: null,
-  downloadUrl: null,
+  fileSize: "18.12 MiB",
+  sha256: "19DAB70F1541C10608C73EFF20CCA2D47A944242B60D9F0CF65C21C0BB702649",
+  downloadUrl: "https://downloads.allgstockmate.com/releases/0.9.0-ea.2/StockMate-0.9.0-ea.2-windows-x64.zip",
   releaseNotesUrl: null
 });
 
