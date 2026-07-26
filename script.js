@@ -81,6 +81,7 @@ if (releaseFields.action) {
     const downloadLink = document.createElement("a");
     downloadLink.className = "button primary release-button";
     downloadLink.dataset.releaseAction = "";
+    downloadLink.dataset.downloadLocation = "release-section";
     downloadLink.href = releaseConfig.downloadUrl;
     downloadLink.textContent = "Download Free";
     releaseFields.action.replaceWith(downloadLink);
@@ -116,6 +117,31 @@ if (releaseFields.notes) {
     }
   }
 }
+const trackDownloadClick = (link) => {
+  const ctaLocation = link.dataset.downloadLocation;
+
+  if (!hasText(ctaLocation) || typeof window.zaraz?.track !== "function") {
+    return;
+  }
+
+  try {
+    void Promise.resolve(
+      window.zaraz.track("stockmate_download_click", {
+        release_version: releaseConfig.version.trim(),
+        download_platform: "windows-x64",
+        cta_location: ctaLocation
+      })
+    ).catch(() => {});
+  } catch {
+    // Analytics must never block the download.
+  }
+};
+
+document.querySelectorAll("a[data-download-location]").forEach((link) => {
+  link.addEventListener("click", () => {
+    trackDownloadClick(link);
+  });
+});
 const navToggle = document.querySelector(".nav-toggle");
 const mainNav = document.querySelector("#main-navigation");
 const navLinks = Array.from(document.querySelectorAll(".main-nav a[href^='#']"));
