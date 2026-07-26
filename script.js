@@ -1,16 +1,16 @@
 const answers = {
   shopTypes:
-    "All-G StockMate is being built for small retail shops that need practical stock control: products, deliveries, batches, expiry dates, low-stock checks, corrections, and transfers between locations. It can fit shops with physical shelves and repeatable stock workflows, whether they sell food, cosmetics, household goods, stationery, accessories, hobby products, or other retail goods.",
+    "All-G StockMate is being built for small retail shops that need practical stock control: products, deliveries, batches, expiry dates, low-stock checks, stock movements, and corrections. It can fit shops with physical shelves and repeatable stock workflows, whether they sell food, cosmetics, household goods, stationery, accessories, hobby products, or other retail goods.",
   version:
-    "If you have one location and want basic stock control, start with EA Free. If you manage 2+ locations, transfers, deliveries, batches, and expiry dates, EA Standard is the better fit.",
+    "Start with EA Free for local stock control in one shop. Standard is planned to add local mobile access, barcode scanning, mobile product creation, invoice photo capture, and OCR. Multiple locations, stock transfers, cloud accounts, synchronization, and remote access belong to Cloud.",
   free:
-    "EA Free includes 1 location, product database, CSV import/export, basic inventory counting, manual stock corrections, basic filters, Local-first use, and up to 2,500 products. It will always stay free.",
+    "EA Free includes local single-shop use, products, stock levels, deliveries, batches, expiry dates, stock movements, stocktaking, CSV import/export, settings, backups, and up to 2,500 products. It will always stay free.",
   locations:
-    "Yes, this is planned for EA Standard. Standard is designed for small retailers that manage 2 or more locations and need to transfer stock between them.",
+    "Multiple locations are planned for Cloud, not Standard. Cloud is intended to add location-specific stock levels and stock transfers between locations.",
   dates:
     "Yes. All-G StockMate is being built to support expiry dates and date statuses: known date, missing date, no date information, and not applicable.",
   cloud:
-    "Cloud is planned later, but it is not the first Early Access priority. The first focus is EA Free and EA Standard. Cloud should only happen if it is ready and useful enough for real users."
+    "Cloud is planned after Standard and is not part of the current Early Access focus. It is intended to add cloud accounts, synchronization, remote access, multiple locations, location stock levels, stock transfers, user roles, and an audit log."
 };
 
 const questionButtons = document.querySelectorAll("[data-question]");
