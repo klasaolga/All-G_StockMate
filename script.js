@@ -133,6 +133,8 @@ const answers = {
 
 const questionButtons = document.querySelectorAll("[data-question]");
 const answerBox = document.querySelector("#assistant-answer");
+const navToggle = document.querySelector(".nav-toggle");
+const mainNav = document.querySelector("#main-navigation");
 const navLinks = Array.from(document.querySelectorAll(".main-nav a[href^='#']"));
 const navSections = navLinks
   .map((link) => {
@@ -140,6 +142,56 @@ const navSections = navLinks
     return target ? { id: target.id, link, target } : null;
   })
   .filter(Boolean);
+
+const mobileNavQuery = window.matchMedia("(max-width: 720px)");
+
+const setMobileNavOpen = (isOpen, { restoreFocus = false } = {}) => {
+  if (!navToggle || !mainNav) {
+    return;
+  }
+
+  const shouldOpen = mobileNavQuery.matches && isOpen;
+
+  navToggle.setAttribute("aria-expanded", String(shouldOpen));
+  mainNav.classList.toggle("is-open", shouldOpen);
+
+  if (restoreFocus) {
+    navToggle.focus();
+  }
+};
+
+if (navToggle && mainNav) {
+  setMobileNavOpen(false);
+
+  navToggle.addEventListener("click", () => {
+    const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+    setMobileNavOpen(!isOpen);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (
+      event.key === "Escape" &&
+      navToggle.getAttribute("aria-expanded") === "true"
+    ) {
+      setMobileNavOpen(false, { restoreFocus: true });
+    }
+  });
+
+  const closeMobileNavForBreakpointChange = () => {
+    setMobileNavOpen(false);
+  };
+
+  if (typeof mobileNavQuery.addEventListener === "function") {
+    mobileNavQuery.addEventListener(
+      "change",
+      closeMobileNavForBreakpointChange
+    );
+  } else {
+    mobileNavQuery.addListener(closeMobileNavForBreakpointChange);
+  }
+
+  document.documentElement.classList.add("js");
+}
 
 const setActiveNavLink = (activeId) => {
   navSections.forEach(({ id, link }) => {
@@ -214,6 +266,7 @@ if (navSections.length) {
 
   navSections.forEach(({ id, link }) => {
     link.addEventListener("click", () => {
+      setMobileNavOpen(false);
       setActiveNavLink(id);
       window.setTimeout(updateActiveNavLink, 180);
     });
