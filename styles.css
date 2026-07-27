@@ -466,6 +466,11 @@ p {
   margin: 0.38rem 0;
 }
 
+.version-card-download {
+  width: 100%;
+  margin-top: auto;
+}
+
 .section-heading {
   margin-bottom: 1.1rem;
 }
@@ -849,6 +854,11 @@ p {
   border-top-color: rgba(20, 105, 216, 0.42);
 }
 
+.free-card .version-title-row h3 {
+  font-size: 1.35rem;
+  line-height: 1.15;
+}
+
 .standard-card {
   position: relative;
   border-color: rgba(20, 105, 216, 0.62);
@@ -1151,6 +1161,26 @@ p {
   margin: 0;
   font-size: 0.92rem;
   line-height: 1.5;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin-top: 0.15rem;
+}
+
+.footer-links a {
+  color: var(--accent-dark);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: none;
+  text-underline-offset: 0.18em;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  text-decoration: underline;
 }
 
 @media (min-width: 901px) {
