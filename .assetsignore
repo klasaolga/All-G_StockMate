@@ -11,6 +11,7 @@ Thumbs.db
 .env
 .env.*
 wrangler.jsonc
+worker.js
 
 # Prevent accidental publication of release and private artifacts
 *.zip
