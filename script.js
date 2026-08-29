@@ -5,7 +5,7 @@ const releaseConfig = Object.freeze({
   fileSize: "18.12 MiB",
   sha256: "19DAB70F1541C10608C73EFF20CCA2D47A944242B60D9F0CF65C21C0BB702649",
   downloadUrl: "https://downloads.allgstockmate.com/releases/0.9.0-ea.2/StockMate-0.9.0-ea.2-windows-x64.zip",
-  releaseNotesUrl: null
+  releaseNotesUrl: "https://allgstockmate.com/updates/early-access-free-windows/"
 });
 
 const hasText = (value) => typeof value === "string" && value.trim().length > 0;
