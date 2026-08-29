@@ -2213,3 +2213,34 @@ p {
     line-height: 1;
   }
 }
+/* === Reliability article inline visual === */
+
+.reliability-inline-visual {
+  float: right;
+  width: clamp(180px, 23vw, 285px);
+  margin: -18rem clamp(-8.5rem, -10vw, -3rem) 0.9rem 1.4rem;
+  pointer-events: none;
+}
+
+.reliability-inline-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scaleX(-1);
+  transform-origin: center;
+}
+
+@media (max-width: 1200px) {
+  .reliability-inline-visual {
+    width: clamp(170px, 25vw, 245px);
+    margin: -13rem clamp(-3.5rem, -6vw, -1rem) 0.85rem 1rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .reliability-inline-visual {
+    float: none;
+    width: min(72%, 260px);
+    margin: 0.85rem auto 1rem;
+  }
+}
