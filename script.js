@@ -8,6 +8,27 @@ const releaseConfig = Object.freeze({
   releaseNotesUrl: "https://allgstockmate.com/updates/early-access-free-windows/"
 });
 
+// === Localized release UI text ===
+const releaseText = Object.freeze(
+  document.documentElement.lang.toLowerCase().startsWith("pl")
+    ? {
+        notAvailableYet: "Jeszcze niedostępne",
+        available: "Dostępna",
+        comingSoon: "Wkrótce",
+        downloadFree: "Pobierz EA Free",
+        downloadComingSoon: "Pobieranie wkrótce",
+        viewReleaseNotes: "Zobacz informacje o wydaniu"
+      }
+    : {
+        notAvailableYet: "Not available yet",
+        available: "Available",
+        comingSoon: "Coming soon",
+        downloadFree: "Download Free",
+        downloadComingSoon: "Download coming soon",
+        viewReleaseNotes: "View release notes"
+      }
+);
+
 const hasText = (value) => typeof value === "string" && value.trim().length > 0;
 
 const isValidHttpsUrl = (value) => {
@@ -43,10 +64,10 @@ const releaseFields = {
   notes: document.querySelector("[data-release-notes]")
 };
 
-const displayReleaseValue = (value) => (hasText(value) ? value.trim() : "Not available yet");
+const displayReleaseValue = (value) => (hasText(value) ? value.trim() : releaseText.notAvailableYet);
 
 if (releaseFields.status) {
-  releaseFields.status.textContent = isReleaseAvailable ? "Available" : "Coming soon";
+  releaseFields.status.textContent = isReleaseAvailable ? releaseText.available : releaseText.comingSoon;
   releaseFields.status.classList.toggle("available", isReleaseAvailable);
 }
 
@@ -83,7 +104,7 @@ if (releaseFields.action) {
     downloadLink.dataset.releaseAction = "";
     downloadLink.dataset.downloadLocation = "release-section";
     downloadLink.href = releaseConfig.downloadUrl;
-    downloadLink.textContent = "Download Free";
+    downloadLink.textContent = releaseText.downloadFree;
     releaseFields.action.replaceWith(downloadLink);
   } else {
     const disabledButton = document.createElement("button");
@@ -91,7 +112,7 @@ if (releaseFields.action) {
     disabledButton.type = "button";
     disabledButton.dataset.releaseAction = "";
     disabledButton.disabled = true;
-    disabledButton.textContent = "Download coming soon";
+    disabledButton.textContent = releaseText.downloadComingSoon;
     releaseFields.action.replaceWith(disabledButton);
   }
 }
@@ -103,14 +124,14 @@ if (releaseFields.notes) {
     const releaseNotesLink = document.createElement("a");
     releaseNotesLink.dataset.releaseNotes = "";
     releaseNotesLink.href = releaseConfig.releaseNotesUrl;
-    releaseNotesLink.textContent = "View release notes";
+    releaseNotesLink.textContent = releaseText.viewReleaseNotes;
     releaseFields.notes.replaceWith(releaseNotesLink);
 
     if (releaseNotesContainer) {
       releaseNotesContainer.hidden = false;
     }
   } else {
-    releaseFields.notes.textContent = "Not available yet";
+    releaseFields.notes.textContent = releaseText.notAvailableYet;
 
     if (releaseNotesContainer) {
       releaseNotesContainer.hidden = true;
