@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Android moves from setup into real inventory work | All-G StockMate</title>
+  <meta
+    name="description"
+    content="StockMate's Android companion is moving beyond local connection and pairing into location-aware product, barcode and inventory workflows."
+  />
+  <meta property="og:title" content="Android moves from setup into real inventory work | All-G StockMate" />
+  <meta
+    property="og:description"
+    content="With pairing, authenticated sessions and location context in place, StockMate Android is moving into practical inventory workflows."
+  />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="All-G StockMate" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="canonical" href="https://allgstockmate.com/updates/android-real-inventory-workflows/" />
+  <link rel="alternate" hreflang="en" href="https://allgstockmate.com/updates/android-real-inventory-workflows/" />
+  <link rel="alternate" hreflang="pl" href="https://allgstockmate.com/pl/updates/android-real-inventory-workflows/" />
+  <link rel="alternate" hreflang="x-default" href="https://allgstockmate.com/updates/android-real-inventory-workflows/" />
+  <meta name="theme-color" content="#1469d8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .android-inline-visual {
+      float: right;
+      width: clamp(230px, 29vw, 350px);
+      margin: -1.5rem clamp(-8rem, -9vw, -2.5rem) 1rem 1.6rem;
+      pointer-events: none;
+    }
+
+    .android-inline-visual img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 1200px) {
+      .android-inline-visual {
+        width: clamp(220px, 30vw, 310px);
+        margin-right: clamp(-3rem, -5vw, -1rem);
+      }
+    }
+
+    @media (max-width: 860px) {
+      .android-inline-visual {
+        float: none;
+        width: min(82%, 340px);
+        margin: 1rem auto 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="All-G StockMate home">
+      <img class="brand-icon" src="/assets/brand-icon-cubes.png" width="32" height="32" alt="" aria-hidden="true" />
+      <span class="brand-name">All-G <strong>StockMate</strong></span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+      <span>Menu</span>
+      <span class="nav-toggle-icon" aria-hidden="true"></span>
+    </button>
+
+    <nav id="main-navigation" class="main-nav" aria-label="Main navigation">
+      <a href="/#problem">Who it’s for</a>
+      <a href="/#features">Features</a>
+      <a href="/#versions">Versions</a>
+      <a href="/#early-access">Early Access</a>
+      <a href="/updates/" aria-current="page">Updates</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/pl/updates/android-real-inventory-workflows/" lang="pl" hreflang="pl">PL</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <article class="section update-article">
+      <a class="article-back" href="/updates/">← All updates</a>
+
+      <header class="update-article-header">
+        <div class="update-meta">
+          <span class="update-type">Development</span>
+          <time datetime="2026-09-05">5 Sep 2026</time>
+        </div>
+
+        <h1>Android moves from setup into real inventory work</h1>
+
+        <p class="update-article-lead">
+          The StockMate Android companion is moving beyond connection, pairing, and session setup
+          into the product workflows people will actually use on the shop floor.
+        </p>
+      </header>
+
+      <section class="update-visual" aria-label="Quick overview">
+        <p class="visual-kicker">Quick view</p>
+
+        <div class="visual-grid visual-grid-3">
+          <div class="visual-card">
+            <p class="visual-label">Foundation</p>
+            <h3>Connect and pair locally</h3>
+            <p>The Android client can establish trusted access to the local StockMate system without turning it into a cloud service.</p>
+          </div>
+
+          <div class="visual-card">
+            <p class="visual-label">Context</p>
+            <h3>Know where the work belongs</h3>
+            <p>Connection details, authenticated access, and location context can now follow the mobile session.</p>
+          </div>
+
+          <div class="visual-card">
+            <p class="visual-label">Next step</p>
+            <h3>Work with actual products</h3>
+            <p>The focus is shifting toward product lookup, barcode-driven actions, and product creation from the phone.</p>
+          </div>
+        </div>
+
+        <ol class="visual-flow">
+          <li>
+            <span class="visual-step">1</span>
+            <strong>Connect locally</strong>
+            <span>Find the StockMate instance on the same network and remember how to reach it.</span>
+          </li>
+          <li>
+            <span class="visual-step">2</span>
+            <strong>Pair and restore</strong>
+            <span>Establish authenticated device access and restore the working session on startup.</span>
+          </li>
+          <li>
+            <span class="visual-step">3</span>
+            <strong>Work in context</strong>
+            <span>Use the selected location for product lookup, barcode work, and the next inventory operations.</span>
+          </li>
+        </ol>
+      </section>
+
+      <div class="update-article-body">
+        <h2>From foundations to workflows</h2>
+
+        <p>
+          A lot of Android work so far has been deliberately unexciting: finding the local StockMate instance,
+          remembering how to reach it, pairing a device, storing access, restoring an authenticated session,
+          and keeping the correct location context.
+        </p>
+
+        <figure class="android-inline-visual" aria-hidden="true">
+          <img
+            src="/assets/android-inventory-workflows-visual.webp"
+            width="720"
+            height="604"
+            loading="lazy"
+            decoding="async"
+            alt=""
+          />
+        </figure>
+
+        <p>
+          Those are not the features anyone puts on a poster. They are, however, the parts that need to work
+          before mobile product features stop being isolated demos and start behaving like one coherent client.
+        </p>
+
+        <p>
+          That foundation is now letting the Android client move into actual inventory operations:
+          finding products, identifying them quickly, and creating the data needed when a product is not already in StockMate.
+        </p>
+
+        <h2>Why build it in this order?</h2>
+
+        <p>
+          Because scanning a barcode is the easy-looking part. The harder questions come immediately afterwards:
+          which StockMate instance receives the request, whether the phone is allowed to make it,
+          which location the action belongs to, what happens when the product does not exist,
+          and whether the result stays consistent with the Windows application.
+        </p>
+
+        <p>
+          Those rules are being established below the UI first. It can make progress look less spectacular from the outside,
+          but it means each new mobile screen can build on the same contract instead of inventing its own version of reality.
+        </p>
+
+        <h2>Windows still stays central</h2>
+
+        <p>
+          The direction has not changed from <a href="/updates/android-standard-roadmap/">the Standard roadmap</a>.
+          StockMate Standard is being designed around the Windows application as the central local system,
+          with Android acting as a practical companion on the same network.
+        </p>
+
+        <p>
+          The phone is for the jobs where carrying the workstation around the shop would be a questionable design decision:
+          quick product checks, barcode work, adding information at the shelf, and later invoice-related workflows.
+        </p>
+
+        <h2>What comes next</h2>
+
+        <p>
+          The next stages continue turning this foundation into complete shop-floor workflows.
+          Product operations are becoming more useful from the phone, barcode capture is being connected to those operations,
+          and the wider Standard mobile scope will continue to build on the same local-access model.
+        </p>
+
+        <div class="update-note">
+          <p>
+            This is development work toward StockMate Standard. The Android companion is not part of EA Free,
+            and there is still work between “the pieces exist” and “the workflow is ready to ship.”
+          </p>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img class="footer-logo" src="/assets/logo.png" alt="All-G StockMate — Inventory & Stock Control" />
+    </div>
+
+    <div class="footer-meta">
+      <p class="footer-line">All-G StockMate by All-G Solutions</p>
+      <p class="footer-line">Szczecin, Poland</p>
+      <p class="footer-status">Status: Early Access / In development</p>
+      <nav class="footer-links" aria-label="Privacy, updates and feedback">
+        <a href="/early-access-privacy/">Early Access privacy</a>
+        <a href="/updates/">Updates</a>
+        <a href="/feedback">Send feedback</a>
+      </nav>
+      <p class="footer-line">&copy; 2026 All-G Solutions</p>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
