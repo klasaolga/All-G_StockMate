@@ -2274,11 +2274,19 @@ p {
   }
 }
 
-/* === Android inventory workflows step badge centering === */
-.android-workflows-update .visual-flow .visual-step {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0.55rem;
+/* === Android inventory workflows step badge positioning === */
+.android-workflows-update .visual-flow li {
+  padding-right: 2.4rem;
 }
-/* === Android inventory workflows step badge centering end === */
+
+.android-workflows-update .visual-flow .visual-step {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1;
+}
+/* === Android inventory workflows step badge positioning end === */
