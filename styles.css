@@ -2273,3 +2273,20 @@ p {
     margin: 1rem auto 1.25rem;
   }
 }
+
+/* === Android inventory workflows step badge positioning === */
+.android-workflows-update .visual-flow li {
+  padding-right: 2.4rem;
+}
+
+.android-workflows-update .visual-flow .visual-step {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1;
+}
+/* === Android inventory workflows step badge positioning end === */
