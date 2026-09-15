@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EA Standard: invoice workflow development update | All-G StockMate</title>
+  <meta
+    name="description"
+    content="A development update on invoice drafts, validation, OCR foundations and the backend workflow being built for All-G StockMate EA Standard."
+  />
+  <meta property="og:title" content="EA Standard: invoice workflow development update | All-G StockMate" />
+  <meta
+    property="og:description"
+    content="StockMate EA Standard is moving from OCR experiments toward a complete invoice workflow with drafts, validation and structured inventory data."
+  />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="All-G StockMate" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="canonical" href="https://allgstockmate.com/updates/ea-standard-development-update/" />
+  <link rel="alternate" hreflang="en" href="https://allgstockmate.com/updates/ea-standard-development-update/" />
+  <link rel="alternate" hreflang="pl" href="https://allgstockmate.com/pl/updates/ea-standard-development-update/" />
+  <link rel="alternate" hreflang="x-default" href="https://allgstockmate.com/updates/ea-standard-development-update/" />
+  <meta name="theme-color" content="#1469d8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .standard-inline-visual {
+      float: right;
+      width: clamp(300px, 36vw, 440px);
+      margin: -0.6rem clamp(-8rem, -9vw, -2.5rem) 1.15rem 1.7rem;
+      pointer-events: none;
+    }
+
+    .standard-inline-visual img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 1200px) {
+      .standard-inline-visual {
+        width: clamp(270px, 35vw, 390px);
+        margin-right: clamp(-3rem, -5vw, -1rem);
+      }
+    }
+
+    @media (max-width: 860px) {
+      .standard-inline-visual {
+        float: none;
+        width: min(94%, 560px);
+        margin: 1rem auto 1.35rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="All-G StockMate home">
+      <img class="brand-icon" src="/assets/brand-icon-cubes.png" width="32" height="32" alt="" aria-hidden="true" />
+      <span class="brand-name">All-G <strong>StockMate</strong></span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+      <span>Menu</span>
+      <span class="nav-toggle-icon" aria-hidden="true"></span>
+    </button>
+
+    <nav id="main-navigation" class="main-nav" aria-label="Main navigation">
+      <a href="/#problem">Who it’s for</a>
+      <a href="/#features">Features</a>
+      <a href="/#versions">Versions</a>
+      <a href="/#early-access">Early Access</a>
+      <a href="/updates/" aria-current="page">Updates</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/pl/updates/ea-standard-development-update/" lang="pl" hreflang="pl">PL</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <article class="section update-article ea-standard-update">
+      <a class="article-back" href="/updates/">← All updates</a>
+
+      <header class="update-article-header">
+        <div class="update-meta">
+          <span class="update-type">Development</span>
+          <time datetime="2026-09-15">15 Sep 2026</time>
+        </div>
+
+        <h1>EA Standard: invoice workflow development update</h1>
+
+        <p class="update-article-lead">
+          Work on StockMate EA Standard has reached the point where invoice handling is starting to form one connected process:
+          from document capture and OCR, through validation, to structured data ready for inventory work.
+        </p>
+      </header>
+
+      <div class="update-article-body">
+        <h2>From invoice data to a usable workflow</h2>
+
+        <p>
+          A large part of the recent Standard work is happening before anything reaches a polished screen.
+          We are building the mechanisms that create, store, and update invoice drafts, validate their data,
+          and move that information safely between the different stages of the process.
+        </p>
+
+        <figure class="standard-inline-visual" aria-hidden="true">
+          <img
+            src="/assets/ea-standard-invoice-workflow-visual.webp"
+            width="1672"
+            height="941"
+            loading="lazy"
+            decoding="async"
+            alt=""
+          />
+        </figure>
+
+        <p>
+          That matters because an invoice workflow is not simply “take a photo and read the text”.
+          A document can be incomplete, ambiguous, formatted in an unexpected way, or contain values that need to be interpreted
+          before they can safely affect products, prices, quantities, or stock.
+        </p>
+
+        <p>
+          The goal is a workflow where document capture, OCR, validation, and StockMate’s inventory model behave like one process,
+          rather than a collection of disconnected features.
+        </p>
+
+        <h2>OCR is only the first step</h2>
+
+        <p>
+          OCR can identify text and values from a photo or scan, but recognition alone does not make the result trustworthy.
+          The extracted information still needs structure: which value is the invoice number, which date matters,
+          which rows describe products, which quantities belong to which units, and which fields are uncertain or missing.
+        </p>
+
+        <p>
+          That is why the current work also covers draft persistence and validation.
+          The system needs to preserve what has already been recognised, allow corrections without losing context,
+          and identify data that should be reviewed before a document is accepted.
+        </p>
+
+        <h2>Why build below the interface first?</h2>
+
+        <p>
+          Because a convincing OCR screen is easy to demonstrate and surprisingly easy to get wrong underneath.
+          If the data model, validation rules, and persistence layer are vague, every later screen ends up compensating for them in its own way.
+        </p>
+
+        <p>
+          StockMate is taking the opposite route. The contracts and storage rules are being established first,
+          then the visible workflow can rely on them instead of inventing new behaviour at every step.
+          It is slower to photograph for a progress post, but considerably nicer when software is expected to remember what happened yesterday.
+        </p>
+
+        <h2>What comes next</h2>
+
+        <p>
+          The next stages will continue connecting these foundations into the complete Standard invoice flow:
+          stronger document validation, wider OCR integration, review and correction of recognised data,
+          and the transition from an approved draft into actual inventory operations.
+        </p>
+
+        <p>
+          We are also continuing the surrounding Standard work so invoice processing can fit into the same local-first model
+          as the rest of StockMate rather than becoming a separate subsystem bolted onto it later.
+        </p>
+
+        <div class="update-note">
+          <p>
+            This is development work toward StockMate EA Standard. These invoice and OCR workflows are not part of EA Free,
+            and there is still work between a reliable foundation and a feature that is ready to ship.
+          </p>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img class="footer-logo" src="/assets/logo.png" alt="All-G StockMate — Inventory & Stock Control" />
+    </div>
+
+    <div class="footer-meta">
+      <p class="footer-line">All-G StockMate by All-G Solutions</p>
+      <p class="footer-line">Szczecin, Poland</p>
+      <p class="footer-status">Status: Early Access / In development</p>
+      <nav class="footer-links" aria-label="Privacy, updates and feedback">
+        <a href="/early-access-privacy/">Early Access privacy</a>
+        <a href="/updates/">Updates</a>
+        <a href="/feedback">Send feedback</a>
+      </nav>
+      <p class="footer-line">&copy; 2026 All-G Solutions</p>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
