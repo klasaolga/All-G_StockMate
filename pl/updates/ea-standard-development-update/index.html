@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EA Standard: aktualizacja prac nad obsługą faktur | All-G StockMate</title>
+  <meta
+    name="description"
+    content="Aktualizacja prac nad wersjami roboczymi faktur, walidacją danych, fundamentami OCR i przepływem dokumentów w All-G StockMate EA Standard."
+  />
+  <meta property="og:title" content="EA Standard: aktualizacja prac nad obsługą faktur | All-G StockMate" />
+  <meta
+    property="og:description"
+    content="StockMate EA Standard przechodzi od eksperymentów z OCR do pełniejszego procesu obsługi faktur z walidacją i uporządkowanymi danymi."
+  />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="All-G StockMate" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="canonical" href="https://allgstockmate.com/pl/updates/ea-standard-development-update/" />
+  <link rel="alternate" hreflang="en" href="https://allgstockmate.com/updates/ea-standard-development-update/" />
+  <link rel="alternate" hreflang="pl" href="https://allgstockmate.com/pl/updates/ea-standard-development-update/" />
+  <link rel="alternate" hreflang="x-default" href="https://allgstockmate.com/updates/ea-standard-development-update/" />
+  <meta name="theme-color" content="#1469d8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .standard-inline-visual {
+      float: right;
+      width: clamp(300px, 36vw, 440px);
+      margin: -0.6rem clamp(-8rem, -9vw, -2.5rem) 1.15rem 1.7rem;
+      pointer-events: none;
+    }
+
+    .standard-inline-visual img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 1200px) {
+      .standard-inline-visual {
+        width: clamp(270px, 35vw, 390px);
+        margin-right: clamp(-3rem, -5vw, -1rem);
+      }
+    }
+
+    @media (max-width: 860px) {
+      .standard-inline-visual {
+        float: none;
+        width: min(94%, 560px);
+        margin: 1rem auto 1.35rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+
+  <header class="site-header">
+    <a class="brand" href="/pl/" aria-label="Strona główna All-G StockMate">
+      <img class="brand-icon" src="/assets/brand-icon-cubes.png" width="32" height="32" alt="" aria-hidden="true" />
+      <span class="brand-name">All-G <strong>StockMate</strong></span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+      <span>Menu</span>
+      <span class="nav-toggle-icon" aria-hidden="true"></span>
+    </button>
+
+    <nav id="main-navigation" class="main-nav" aria-label="Nawigacja główna">
+      <a href="/pl/#problem">Dla kogo</a>
+      <a href="/pl/#features">Funkcje</a>
+      <a href="/pl/#versions">Wersje</a>
+      <a href="/pl/#early-access">Early Access</a>
+      <a href="/pl/updates/" aria-current="page">Aktualizacje</a>
+      <a href="/pl/#faq">FAQ</a>
+      <a href="/updates/ea-standard-development-update/" lang="en" hreflang="en">EN</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <article class="section update-article ea-standard-update">
+      <a class="article-back" href="/pl/updates/">← Wszystkie aktualizacje</a>
+
+      <header class="update-article-header">
+        <div class="update-meta">
+          <span class="update-type">Rozwój</span>
+          <time datetime="2026-09-15">15 wrz 2026</time>
+        </div>
+
+        <h1>EA Standard: aktualizacja prac nad obsługą faktur</h1>
+
+        <p class="update-article-lead">
+          Prace nad StockMate EA Standard weszły w etap, w którym obsługa faktur zaczyna składać się w jeden proces:
+          od dokumentu i OCR, przez walidację, po uporządkowane dane gotowe do pracy magazynowej.
+        </p>
+      </header>
+
+      <div class="update-article-body">
+        <h2>Od danych z faktury do użytecznego workflow</h2>
+
+        <p>
+          Duża część ostatnich prac nad wersją Standard dzieje się jeszcze zanim cokolwiek trafi na dopracowany ekran.
+          Budujemy mechanizmy odpowiedzialne za tworzenie, przechowywanie i aktualizowanie wersji roboczych faktur,
+          walidację danych oraz bezpieczne przekazywanie ich pomiędzy kolejnymi etapami procesu.
+        </p>
+
+        <figure class="standard-inline-visual" aria-hidden="true">
+          <img
+            src="/assets/ea-standard-invoice-workflow-visual.webp"
+            width="1672"
+            height="941"
+            loading="lazy"
+            decoding="async"
+            alt=""
+          />
+        </figure>
+
+        <p>
+          To ważne, bo obsługa faktury nie sprowadza się do „zrób zdjęcie i odczytaj tekst”.
+          Dokument może być niepełny, niejednoznaczny, mieć nietypowy układ albo zawierać wartości,
+          które trzeba poprawnie zinterpretować, zanim wpłyną na produkty, ceny, ilości czy stany magazynowe.
+        </p>
+
+        <p>
+          Celem jest workflow, w którym przechwycenie dokumentu, OCR, walidacja i model magazynowy StockMate
+          zachowują się jak jeden proces, a nie zbiór niezależnych funkcji posklejanych dopiero na końcu.
+        </p>
+
+        <h2>OCR to dopiero początek</h2>
+
+        <p>
+          OCR potrafi rozpoznać tekst i wartości ze zdjęcia lub skanu, ale samo rozpoznanie nie czyni wyniku wiarygodnym.
+          Odczytane informacje trzeba jeszcze uporządkować: ustalić, która wartość jest numerem faktury,
+          która data ma znaczenie, które wiersze opisują produkty, jakie ilości dotyczą jakich jednostek
+          oraz które pola są niepewne albo niekompletne.
+        </p>
+
+        <p>
+          Dlatego obecny etap obejmuje również trwałe wersje robocze dokumentów i ich walidację.
+          System musi zachować to, co już zostało rozpoznane, pozwolić na poprawki bez utraty kontekstu
+          i wskazać dane wymagające sprawdzenia przed zaakceptowaniem dokumentu.
+        </p>
+
+        <h2>Dlaczego najpierw budujemy warstwę pod interfejsem?</h2>
+
+        <p>
+          Bo efektowny ekran OCR stosunkowo łatwo pokazać na demonstracji i zaskakująco łatwo źle zbudować od środka.
+          Jeśli model danych, reguły walidacji i zapis są nieprecyzyjne, każdy kolejny ekran zaczyna nadrabiać to po swojemu.
+        </p>
+
+        <p>
+          StockMate idzie w odwrotną stronę. Najpierw ustalamy kontrakty, zasady zapisu i zachowanie danych,
+          a dopiero później warstwa widoczna dla użytkownika może na nich polegać zamiast wymyślać nowe reguły na każdym kroku.
+          Trochę gorzej wygląda to na zdjęciu z postępu prac, za to program ma większą szansę pamiętać jutro to, co zrobił dziś.
+        </p>
+
+        <h2>Co dalej</h2>
+
+        <p>
+          Kolejne etapy będą łączyć te fundamenty w pełny przepływ obsługi faktury w wersji Standard:
+          mocniejszą walidację dokumentów, szerszą integrację OCR, przegląd i poprawianie rozpoznanych danych
+          oraz przejście od zaakceptowanej wersji roboczej do właściwych operacji magazynowych.
+        </p>
+
+        <p>
+          Równolegle rozwijamy pozostałe elementy Standardu tak, aby obsługa faktur pasowała do tego samego lokalnego modelu działania
+          co reszta StockMate, zamiast później stać się osobnym podsystemem doczepionym z boku.
+        </p>
+
+        <div class="update-note">
+          <p>
+            To są prace rozwojowe prowadzące do StockMate EA Standard. Obsługa faktur i OCR nie należy do EA Free,
+            a między stabilnym fundamentem i funkcją gotową do wydania nadal pozostaje trochę pracy.
+          </p>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img class="footer-logo" src="/assets/logo.png" alt="All-G StockMate — Inventory & Stock Control" />
+    </div>
+
+    <div class="footer-meta">
+      <p class="footer-line">All-G StockMate od All-G Solutions</p>
+      <p class="footer-line">Szczecin, Polska</p>
+      <p class="footer-status">Status: Early Access / w trakcie rozwoju</p>
+      <nav class="footer-links" aria-label="Prywatność, aktualizacje i opinie">
+        <a href="/early-access-privacy/">Prywatność Early Access</a>
+        <a href="/pl/updates/">Aktualizacje</a>
+        <a href="/feedback">Wyślij opinię</a>
+      </nav>
+      <p class="footer-line">&copy; 2026 All-G Solutions</p>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
