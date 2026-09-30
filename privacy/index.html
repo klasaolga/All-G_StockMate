@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Privacy Policy | All-G StockMate</title>
+
+  <meta name="description" content="Privacy Policy for All-G StockMate - local-first architecture, device communication, and personal data governance." />
+
+  <meta property="og:title" content="Privacy Policy | All-G StockMate" />
+  <meta property="og:description" content="Privacy Policy for All-G StockMate - local-first architecture, device communication, and personal data governance." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="All-G StockMate" />
+
+  <link rel="canonical" href="https://allgstockmate.com/privacy/" />
+  <link rel="alternate" hreflang="en" href="https://allgstockmate.com/privacy/" />
+  <link rel="alternate" hreflang="pl" href="https://allgstockmate.com/pl/privacy/" />
+  <link rel="alternate" hreflang="x-default" href="https://allgstockmate.com/privacy/" />
+
+  <meta name="theme-color" content="#1469d8" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/legal.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="All-G StockMate home">
+      <img
+        class="brand-icon"
+        src="/assets/brand-icon-cubes.png"
+        width="32"
+        height="32"
+        alt=""
+        aria-hidden="true"
+      />
+      <span class="brand-name">All-G <strong>StockMate</strong></span>
+    </a>
+
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="main-navigation"
+    >
+      <span>Menu</span>
+      <span class="nav-toggle-icon" aria-hidden="true"></span>
+    </button>
+
+    <nav id="main-navigation" class="main-nav" aria-label="Main navigation">
+      <a href="/#problem">Who it's for</a>
+      <a href="/#features">Features</a>
+      <a href="/#versions">Versions</a>
+      <a href="/#early-access">Early Access</a>
+      <a href="/updates/">Updates</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/pl/privacy/" lang="pl" hreflang="pl">PL</a>
+    </nav>
+  </header>
+
+  <main id="main" class="legal-main">
+    <header class="legal-hero">
+      <p class="eyebrow">Legal documentation</p>
+      <h1>Privacy Policy for All-G StockMate</h1>
+      <p class="legal-lead">Local-first inventory architecture, device communication, and personal data governance.</p>
+      <p class="legal-updated">
+        <strong>Version:</strong> 0.9.0-ea.6 (Early Access) &bull; <strong>Effective Date:</strong> September 30, 2026 &bull; <strong>Document Status:</strong> Ready for publication (READY_FOR_PUBLICATION)
+      </p>
+    </header>
+
+    <article class="legal-content">
+      <section class="legal-section" aria-labelledby="section-1">
+
+        <h2 id="section-1">1. Introduction, Software Operator, and Data Governance Scope</h2>
+
+        <p>This Privacy Policy describes the policies and practices regarding the processing of data in connection with the use of the <strong>All-G StockMate</strong> software (desktop application for Windows and mobile application for Android), hereinafter referred to as the "Application" or "Software".</p>
+
+        <p>
+          <strong>Software Operator and data controller for data processed directly by All-G Solutions:</strong><br />
+          <strong>Olga Klasa All G Solutions</strong><br />
+          Brand: <strong>All-G Solutions</strong><br />
+          Registered Office / Business Address: ul. Stanisława Ignacego Witkiewicza 51 lok. 7, 71-124 Szczecin, Poland<br />
+          Tax Identification Number (NIP): 6731884436<br />
+          Domain Website: <a href="https://allgstockmate.com">allgstockmate.com</a><br />
+          General Contact Email: <a href="mailto:contact@allgstockmate.com"><code>contact@allgstockmate.com</code></a><br />
+          Privacy and Support Email: <a href="mailto:support@allgstockmate.com"><code>support@allgstockmate.com</code></a>
+        </p>
+
+        <p><strong>Important Role Delineation in Local-First Architecture:</strong></p>
+
+        <ul>
+
+          <li><strong>No All-G Access to Local Data:</strong> All-G Solutions is the software operator and data controller solely with respect to data processed directly by All-G Solutions (such as technical support email correspondence). All-G Solutions has no technical access to the User's local database and does not act as a data controller for inventory or invoice records created and stored locally by the User on their own devices.</li>
+
+          <li><strong>User as Controller of Local Records:</strong> All local inventory data and invoice documents remain under the User's sole custody and control. Where data stored locally contains personal data of third parties (such as sole proprietor suppliers), the legal obligations of a data controller under applicable data protection laws (including GDPR) rest entirely with the User.</li>
+
+          <li><strong>Third-Party Components:</strong> Diagnostic telemetry collected by the Google ML Kit SDK is governed by the independent privacy policies of Google LLC as the component provider.</li>
+
+        </ul>
+
+        <p>For questions or inquiries regarding the Software, privacy, or user rights, please contact us at: <a href="mailto:support@allgstockmate.com"><code>support@allgstockmate.com</code></a>.</p>
+
+      </section>
+
+      <section class="legal-section" aria-labelledby="section-2">
+
+        <h2 id="section-2">2. Local-First Architecture and Absence of All-G Cloud</h2>
+
+        <p>StockMate in its Free and Standard tiers is engineered with a <strong>local-first</strong> architecture:</p>
+
+        <ol>
+
+          <li><strong>No Cloud Database:</strong> All-G Solutions does not operate, host, or maintain any centralized cloud database for Free and Standard tiers.</li>
+
+          <li><strong>Local Windows Host:</strong> All operational warehouse data (product catalog, inventory stock levels, transaction history, invoice documents, and settings) is stored exclusively on the user's local Windows computer in a local SQLite database (<code>inventory.db</code>).</li>
+
+          <li><strong>No Cloud Accounts Required:</strong> Using the Application in Free and Standard tiers does not require creating a cloud account with All-G or registering an online identity.</li>
+
+        </ol>
+
+      </section>
+
+      <section class="legal-section" aria-labelledby="section-3">
+
+        <h2 id="section-3">3. Local Area Network (LAN) Communication — Important Notice Regarding HTTP Cleartext Transport</h2>
+
+        <p>The Android mobile client connects to the Windows desktop server exclusively across the user's local network (LAN / Wi-Fi):</p>
+
+        <ol>
+
+          <li><strong>Cleartext HTTP in Early Access:</strong> In the current Early Access release (0.9.0-ea.6), communication across the local network is established over cleartext <strong>HTTP</strong> (<code>http://&lt;computer-ip&gt;:&lt;port&gt;</code>).</li>
+
+          <li><strong>No TLS Encryption on LAN:</strong> The local connection does not use TLS/HTTPS encryption. Consequently, <strong>data transmitted between the mobile phone and desktop computer across the local network is NOT cryptographically encrypted in transit</strong>.</li>
+
+          <li><strong>User Security Recommendations:</strong> The user should operate the Application exclusively within a trusted, private local network (such as a company or home network secured with WPA2/WPA3). <strong>Using the StockMate mobile connection on open, public, or untrusted Wi-Fi networks is strongly discouraged</strong>, as network traffic could be intercepted by third parties on that local network.</li>
+
+          <li><strong>Google Play Data Safety Alignment:</strong> Due to the cleartext HTTP transport on LAN, the Google Play Data Safety declaration for the Application accurately discloses that collected data is not encrypted in transit across all channels (<code>ALL_COLLECTED_DATA_ENCRYPTED_IN_TRANSIT=NO</code>).</li>
+
+        </ol>
+
+      </section>
+
+      <section class="legal-section" aria-labelledby="section-4">
+
+        <h2 id="section-4">4. Scope and Categories of Data Transmitted between Devices (Android -&gt; Desktop)</h2>
+
+        <p>When using the mobile module across the local network, operational queries and data necessary for warehouse management are transmitted.</p>
+
+        <p>The vast majority of this information constitutes <strong>commercial and warehouse operational data</strong>, rather than personal data, unless it directly identifies an individual sole proprietor or employee.</p>
+
+        <p>Categories of data transmitted over the local network include:</p>
+
+        <ul>
+
+          <li><strong>Pairing and Device Identification Data:</strong> Android hardware model name (<code>android.os.Build.MODEL</code>, e.g. "Pixel 8"), 6-digit one-time desktop pairing PIN, and internal technical session token (Bearer token);</li>
+
+          <li><strong>Product Catalog:</strong> Product names, categories, subcategories, units of measure, alert thresholds, classification facet IDs, and producer SKU codes;</li>
+
+          <li><strong>Barcodes:</strong> EAN, UPC, Code 128 barcodes transmitted for product search, catalog assignment, or stock counts;</li>
+
+          <li><strong>Queries and Filters:</strong> Text-based search queries within the warehouse catalog;</li>
+
+          <li><strong>Inventory Stock and Movements:</strong> Warehouse storage zone IDs, transfer quantities between locations, and operational movement notes;</li>
+
+          <li><strong>Stocktake Audits:</strong> Physical inventory session names, timestamps, physical counted quantities, and audit notes;</li>
+
+          <li><strong>Invoice Documents and Images:</strong> Photo captures from the device camera (JPEG) and document files (PDF) transmitted to the desktop for local analysis;</li>
+
+          <li><strong>Invoice Records and Line Items:</strong> Invoice document numbers, issue dates, supplier/vendor legal names, supplier tax identification numbers (Tax ID / NIP), net amounts, VAT tax amounts, gross totals, line-item product descriptions, and unit net/gross purchase prices.</li>
+
+        </ul>
+
+      </section>
+
+      <section class="legal-section" aria-labelledby="section-5">
+
+        <h2 id="section-5">5. Mobile Device Permissions (Camera) and Barcode Scanning</h2>
+
+        <ol>
+
+          <li>
+            <strong>Camera Permission (<code>android.permission.CAMERA</code>):</strong> The camera permission is invoked strictly upon user action for two purposes:
+            <ul>
+
+              <li>optically scanning item barcodes via the camera viewfinder dialog,</li>
+
+              <li>capturing photo images of invoice documents in the invoice module.</li>
+
+            </ul>
+          </li>
+
+          <li><strong>Local Frame Processing:</strong> Video frames from the camera during barcode scanning are processed solely in volatile device memory (RAM). Camera frames and decoded barcode values <strong>are NEVER sent to Google servers or All-G</strong>. Frame buffers are closed and discarded immediately after each analysis attempt.</li>
+
+        </ol>
+
+      </section>
+
+      <section class="legal-section" aria-labelledby="section-6">
+
+        <h2 id="section-6">6. Third-Party Component: Google ML Kit Barcode Scanning</h2>
+
+        <p>The mobile application embeds the <strong>Google ML Kit Barcode Scanning</strong> SDK (<code>com.google.mlkit:barcode-scanning</code>, version 17.3.0), provided by <strong>Google LLC</strong> (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA).</p>
+
+        <ol>
+
+          <li><strong>Bundled Model:</strong> The machine learning model responsible for barcode recognition is bundled directly within the application package and operates offline on the phone without requiring dynamic model downloads from Google Play Services during scanning.</li>
+
+          <li>
+            <strong>SDK Telemetry and Diagnostics:</strong> The Google ML Kit library contains Google's standard diagnostic telemetry mechanisms (Firelog/Playlog). If the mobile device has an active Internet connection, the ML Kit SDK may transmit technical telemetry to Google LLC regarding SDK operations, including:
+            <ul>
+
+              <li>technical hardware specifications (device model, Android OS version),</li>
+
+              <li>SDK and application installation identifiers,</li>
+
+              <li>performance metrics (scan execution latency, barcode formats detected, error codes, API configuration).</li>
+
+            </ul>
+          </li>
+
+          <li><strong>SDK Telemetry Security:</strong> All diagnostic telemetry dispatched by Google ML Kit is transmitted directly to Google servers over encrypted <strong>HTTPS</strong>.</li>
+
+          <li><strong>No Inventory Data Sent to Google:</strong> Google LLC does not receive decoded barcode content, product names, inventory quantities, or invoice photos through the StockMate scanner.</li>
+
+          <li><strong>Google Privacy Policy:</strong> For details on how Google processes diagnostic telemetry, refer to the Google Privacy Policy: <a href="https://policies.google.com/privacy." target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy.</a></li>
+
+        </ol>
+
+      </section>
+
+      <section class="legal-section" aria-labelledby="section-7">
+
+        <h2 id="section-7">7. Local Invoice Document Processing (OCR)</h2>
+
+        <p>The automated invoice analysis module operates using the <strong>Docling / RapidOCR</strong> engine executing directly on the user's Windows computer:</p>
+
+        <ol>
+
+          <li><strong>On-Premise Desktop Processing:</strong> Converting invoice images or PDF documents into structured text and tables takes place 100% locally on the user's computer hardware.</li>
+
+          <li><strong>No Transmission to All-G:</strong> Invoice photos, PDF documents, recognized text tables, and extracted items <strong>are NEVER transmitted to All-G Solutions servers</strong>.</li>
+
+          <li><strong>No Cloud OCR Engines:</strong> In the current Free and Standard tiers, the Application does not integrate or utilize any third-party cloud OCR API.</li>
+
+        </ol>
+
+      </section>
+
+      <section class="legal-section" aria-labelledby="section-8">
+
+        <h2 id="section-8">8. Absence of All-G Telemetry, Analytics, and Advertising</h2>
+
+        <ol>
+
+          <li><strong>Zero Behavioral Analytics:</strong> All-G Solutions does not track or collect data regarding user workflows, screen navigation, operating duration, or feature interactions.</li>
+
+          <li><strong>No Third-Party Trackers:</strong> No tracking or marketing SDKs (such as Google Analytics for Firebase, Mixpanel, Adjust, AppsFlyer, etc.) are embedded in the Application.</li>
+
+          <li><strong>No Third-Party Crash Reporting:</strong> The Application does not transmit error reports or crash dumps to external services (such as Crashlytics, Sentry, Bugsnag, etc.). Diagnostic logs remain strictly on the local device.</li>
+
+          <li><strong>No Advertisements:</strong> The Software contains no advertisements and incorporates no ad network SDKs (such as Google AdMob).</li>
+
+        </ol>
+
+      </section>
+
+      <section class="legal-section" aria-labelledby="section-9">
+
+        <h2 id="section-9">9. Status of the OCR Improvement Program</h2>
+
+        <p>For complete transparency, we disclose the technical status of the OCR Improvement Program:</p>
+
+        <ol>
+
+          <li><strong>Currently Completely Inactive:</strong> In version 0.9.0-ea.6, functionality for collecting document samples for OCR training <strong>DOES NOT EXIST AND IS INACTIVE</strong> (<code>OCR_IMPROVEMENT_COLLECTION_ACTIVE=NO</code>). No invoices, images, or extracted text snippets are harvested for development.</li>
+
+          <li>
+            <strong>Framework for Potential Future Program:</strong> Should such a program be introduced in future releases:
+            <ul>
+
+              <li>participation will be strictly <strong>voluntary</strong> and require explicit, separate consent (<strong>opt-in</strong>);</li>
+
+              <li>the default setting will always be <strong>disabled (OFF)</strong>;</li>
+
+              <li>accepting this Privacy Policy or the Terms / EULA <strong>DOES NOT constitute consent</strong> to participate in the OCR Improvement Program;</li>
+
+              <li>refusing to participate or revoking consent will not restrict or degrade any core software features;</li>
+
+              <li>launching any document collection feature will be preceded by a dedicated formal privacy boundary audit (privacy gate).</li>
+
+            </ul>
+          </li>
+
+        </ol>
+
+      </section>
+
+      <section class="legal-section" aria-labelledby="section-10">
+
+        <h2 id="section-10">10. Data Retention, Backups, and Deletion</h2>
+
+        <ol>
+
+          <li><strong>User Data Ownership and Custody:</strong> Because all inventory and invoice data resides exclusively on the user's local devices, the user retains sole authority over data retention periods, archival strategies, and backups.</li>
+
+          <li>
+            <strong>Data Deletion:</strong>
+            <ul>
+
+              <li>Deleting inventory data from the Windows computer is achieved by deleting the SQLite database file (<code>inventory.db</code>) or uninstalling the desktop application along with its data directory.</li>
+
+              <li>Uninstalling the Android mobile app clears mobile cache and the session token, but <strong>does not delete the database on the desktop computer</strong>.</li>
+
+            </ul>
+          </li>
+
+          <li><strong>Data Subject Rights (GDPR):</strong> Where the user processes personal data of individuals (such as sole proprietor suppliers) within their inventory database, the user acts as the data controller and can fulfill access, rectification, or deletion requests directly via the Application interface or local database.</li>
+
+        </ol>
+
+      </section>
+
+      <section class="legal-section" aria-labelledby="section-11">
+
+        <h2 id="section-11">11. Amendments to this Privacy Policy</h2>
+
+        <p>All-G Solutions reserves the right to update this Privacy Policy to reflect technological modifications, software enhancements (notably the future introduction of TLS encryption on the LAN transport), or changes in legal requirements.</p>
+
+        <p>Any revised policy will be published with an updated effective date in the Software documentation repository.</p>
+
+      </section>
+
+      <section class="legal-section" aria-labelledby="section-12">
+
+        <h2 id="section-12">12. Contact Information</h2>
+
+        <p>If you have questions, comments, or concerns regarding this Privacy Policy, please contact us at:</p>
+
+        <p>
+          <strong>All-G Solutions</strong><br />
+          Support Email: <a href="mailto:support@allgstockmate.com"><code>support@allgstockmate.com</code></a><br />
+          General Email: <a href="mailto:contact@allgstockmate.com"><code>contact@allgstockmate.com</code></a><br />
+          Website: <a href="https://allgstockmate.com">allgstockmate.com</a><br />
+          Postal Address: ul. Stanisława Ignacego Witkiewicza 51 lok. 7, 71-124 Szczecin, Poland
+        </p>
+
+      </section>
+    </article>
+
+    <p class="legal-back">
+      <a href="/">&larr; Back to All-G StockMate</a>
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img
+        class="footer-logo"
+        src="/assets/logo.png"
+        alt="All-G StockMate - Inventory &amp; Stock Control"
+      />
+    </div>
+
+    <div class="footer-meta">
+      <p class="footer-line">All-G StockMate by All-G Solutions</p>
+      <p class="footer-line">Szczecin, Poland</p>
+      <p class="footer-status">Status: Early Access / In development</p>
+      <nav class="footer-links" aria-label="Privacy and legal links">
+        <a href="/privacy/" aria-current="page">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/early-access-privacy/">Early Access privacy</a>
+        <a href="/updates/">Updates</a>
+        <a href="/feedback">Send feedback</a>
+      </nav>
+      <p class="footer-line">&copy; 2026 All-G Solutions</p>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
