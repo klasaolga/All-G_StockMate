@@ -1,19 +1,23 @@
+const isPolishDoc = document.documentElement.lang.toLowerCase().startsWith("pl");
+
 const releaseConfig = Object.freeze({
   status: "available",
   version: "0.9.0-ea.5",
   platform: "Windows 10/11 · 64-bit",
   fileSize: "705.38 MiB",
   sha256: "0EFB450E141851BED0A9F63246D0E63ED65C0FFB7A1BE9E7EAC7B0AC8BFEF293",
-  downloadUrl: "https://github.com/klasaolga/All-G_StockMate_inventory-app/releases/download/v0.9.0-ea.5/All-G-StockMate-0.9.0-ea.5-windows-x64.zip",
-  releaseNotesUrl: "https://allgstockmate.com/updates/early-access-release-milestone/"
+  downloadUrl: "https://github.com/klasaolga/All-G_StockMate_Releases/releases/download/v0.9.0-ea.5/All-G-StockMate-0.9.0-ea.5-windows-x64.zip",
+  releaseNotesUrl: isPolishDoc
+    ? "https://allgstockmate.com/pl/updates/early-access-release-milestone/"
+    : "https://allgstockmate.com/updates/early-access-release-milestone/"
 });
 
 // === Localized release UI text ===
 const releaseText = Object.freeze(
-  document.documentElement.lang.toLowerCase().startsWith("pl")
+  isPolishDoc
     ? {
         notAvailableYet: "Jeszcze niedostępne",
-        available: "Dostępna",
+        available: "Dostępne",
         comingSoon: "Wkrótce",
         downloadFree: "Pobierz EA Free",
         downloadComingSoon: "Pobieranie wkrótce",
