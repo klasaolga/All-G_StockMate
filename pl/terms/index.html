@@ -27,22 +27,19 @@
 
   <link rel="stylesheet" href="/styles.css" />
   <link rel="stylesheet" href="/legal.css" />
+  <link rel="stylesheet" href="/editorial-site.css" />
 </head>
 
-<body>
+<body class="site-editorial">
   <a class="skip-link" href="#main">Przejdź do treści</a>
 
   <header class="site-header">
     <a class="brand" href="/pl/" aria-label="Strona główna All-G StockMate">
-      <img
-        class="brand-icon"
-        src="/assets/brand-icon-cubes.png"
-        width="32"
-        height="32"
-        alt=""
-        aria-hidden="true"
-      />
-      <span class="brand-name">All-G <strong>StockMate</strong></span>
+      <img class="editorial-header-symbol" src="/assets/stockmate-brand-symbol-editorial.png" width="66" height="40" alt="" />
+      <span class="editorial-header-wordmark">
+        <span class="editorial-header-name">All-G StockMate</span>
+        <span class="editorial-header-tagline">INVENTORY &amp; STOCK CONTROL</span>
+      </span>
     </a>
 
     <button
@@ -56,14 +53,16 @@
     </button>
 
     <nav id="main-navigation" class="main-nav" aria-label="Nawigacja główna">
+      <a href="/pl/#product">Produkt</a>
       <a href="/pl/#problem">Dla kogo</a>
       <a href="/pl/#features">Funkcje</a>
       <a href="/pl/#versions">Wersje</a>
       <a href="/pl/#early-access">Early Access</a>
-      <a href="/pl/updates/">Aktualizacje</a>
       <a href="/pl/#faq">FAQ</a>
+      <a href="/pl/updates/">Aktualności</a>
       <a href="/terms/" lang="en" hreflang="en">EN</a>
     </nav>
+    <a class="editorial-header-release" href="/pl/updates/early-access-release-milestone/">Aktualne wydanie <span aria-hidden="true">↗</span></a>
   </header>
 
   <main id="main" class="legal-main">
@@ -381,7 +380,7 @@
         <a href="/pl/privacy/">Polityka prywatności</a>
         <a href="/pl/terms/" aria-current="page">Regulamin</a>
         <a href="/early-access-privacy/">Prywatność Early Access</a>
-        <a href="/pl/updates/">Aktualizacje</a>
+        <a href="/pl/updates/">Aktualności</a>
         <a href="/feedback">Wyślij opinię</a>
       </nav>
       <p class="footer-line">&copy; 2026 All-G Solutions</p>

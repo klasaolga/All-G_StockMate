@@ -1,11 +1,11 @@
 const releaseConfig = Object.freeze({
   status: "available",
-  version: "0.9.0-ea.4",
+  version: "0.9.0-ea.5",
   platform: "Windows 10/11 · 64-bit",
-  fileSize: "18.30 MiB",
-  sha256: "E2F58EAED0F7CE6035A366E40009F291FF49F3C569A70F822AA5ABFDE42E4610",
-  downloadUrl: "https://downloads.allgstockmate.com/releases/0.9.0-ea.4/All-G-StockMate-v0.9.0-ea.4-windows-x64.zip",
-  releaseNotesUrl: "https://allgstockmate.com/updates/early-access-free-windows/"
+  fileSize: "705.38 MiB",
+  sha256: "0EFB450E141851BED0A9F63246D0E63ED65C0FFB7A1BE9E7EAC7B0AC8BFEF293",
+  downloadUrl: "https://github.com/klasaolga/All-G_StockMate_inventory-app/releases/download/v0.9.0-ea.5/All-G-StockMate-0.9.0-ea.5-windows-x64.zip",
+  releaseNotesUrl: "https://allgstockmate.com/updates/early-access-release-milestone/"
 });
 
 // === Localized release UI text ===

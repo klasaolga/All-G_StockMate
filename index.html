@@ -31,14 +31,20 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="shortcut icon" href="favicon.ico" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="home-editorial.css" />
+  <link rel="stylesheet" href="/editorial-site.css" />
+  <link rel="stylesheet" href="/editorial-product-423.css" />
 </head>
-<body>
+<body class="page-home site-editorial">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <a class="brand" href="#main" aria-label="All-G StockMate home">
-      <img class="brand-icon" src="assets/brand-icon-cubes.png" width="32" height="32" alt="" aria-hidden="true" />
-      <span class="brand-name">All-G <strong>StockMate</strong></span>
+      <img class="editorial-header-symbol" src="assets/stockmate-brand-symbol-editorial.png" alt="" width="66" height="40" />
+      <span class="editorial-header-wordmark">
+        <span class="editorial-header-name">All-G StockMate</span>
+        <span class="editorial-header-tagline">INVENTORY &amp; STOCK CONTROL</span>
+      </span>
     </a>
 
     <button
@@ -52,50 +58,112 @@
     </button>
 
     <nav id="main-navigation" class="main-nav" aria-label="Main navigation">
+      <a href="#product">Product</a>
       <a href="#problem">Who it’s for</a>
       <a href="#features">Features</a>
       <a href="#versions">Versions</a>
       <a href="#early-access">Early Access</a>
-      <a href="/updates/">Updates</a>
       <a href="#faq">FAQ</a>
-      <a href="/pl/" lang="pl" hreflang="pl">PL</a>
+      <a href="/updates/">News</a>
+
     </nav>
+      <div class="editorial-header-extras">
+      <div class="editorial-language" aria-label="Language / Język"><a href="/pl/" lang="pl" hreflang="pl">PL</a></div>
+      <a class="editorial-header-release" href="/updates/early-access-release-milestone/">Current release <span aria-hidden="true">↗</span></a>
+    </div>
   </header>
 
   <main id="main">
-    <section class="hero section">
-      <div class="hero-content">
-        <p class="eyebrow">StockMate by All-G Solutions</p>
-        <h1>Simple stock control for small shops with real shelves, real deliveries, and real mess.</h1>
-        <p class="hero-lead">
-          A practical inventory tool for small retail shops that need to manage products,
-          deliveries, stock levels, expiry dates, stocktaking, and stock movements
-          without jumping into oversized enterprise software.
-        </p>
-
-        <div class="hero-actions">
-          <a class="button primary" href="#early-access">Check Early Access status</a>
-          <a class="hero-link-secondary" href="#versions">See product versions <span aria-hidden="true">→</span></a>
+    <!-- Approved All-G StockMate Editorial 4.1 hero; page-specific CSS -->
+    <section class="editorial-home-hero" aria-labelledby="editorial-title">
+      <div class="editorial-outer">
+        <p class="editorial-overline">ALL-G STOCKMATE / INVENTORY &amp; STOCK CONTROL</p>
+        <div class="editorial-board">
+          <div class="editorial-board-header">
+            <div class="editorial-board-name">ALL-G /<br>STOCKMATE</div>
+            <p class="editorial-board-kicker">INVENTORY &amp; STOCK CONTROL</p>
+          </div>
+          <div class="editorial-board-main">
+            <div class="editorial-copy">
+              <p class="editorial-index">01 / FOR SHOPS WITH REAL STOCK</p>
+              <h1 class="editorial-headline" id="editorial-title">
+                <span class="editorial-headline-first">Built for order.</span>
+                <span class="editorial-headline-second">Designed for clarity.</span>
+              </h1>
+              <p class="editorial-description">Products, deliveries, stock levels and expiry dates in one clear tool. Made for independent shops, without unnecessary complexity.</p>
+              <div class="editorial-buttons">
+                <a class="editorial-cta-primary" href="https://github.com/klasaolga/All-G_StockMate_inventory-app/releases/download/v0.9.0-ea.5/All-G-StockMate-0.9.0-ea.5-windows-x64.zip" data-download-location="hero-en">
+                  <span>Download EA Free</span><span aria-hidden="true">↗</span>
+                </a>
+                <a class="editorial-cta-secondary" href="#product">Explore the product ↓</a>
+              </div>
+            </div>
+            <div class="editorial-cubes-frame">
+              <img class="editorial-cubes" src="assets/stockmate-cubes-translucent.png"
+                   width="1024" height="1024"
+                   alt="The original All-G StockMate blue isometric cubes" />
+              <div class="editorial-object-caption">
+                <span>ALL-G STOCKMATE / BRAND OBJECT</span><span>INVENTORY &amp; STOCK CONTROL</span>
+              </div>
+            </div>
+          </div>
+          <div class="editorial-facts">
+            <div class="editorial-fact"><span class="editorial-fact-label">Release</span><span class="editorial-fact-value">0.9.0-ea.5</span></div>
+            <div class="editorial-fact"><span class="editorial-fact-label">Platform</span><span class="editorial-fact-value">Windows + Android</span></div>
+            <div class="editorial-fact"><span class="editorial-fact-label">Mode</span><span class="editorial-fact-value">Early Access</span></div>
+            <div class="editorial-fact"><span class="editorial-fact-label">Focus</span><span class="editorial-fact-value">Order and clarity</span></div>
+          </div>
         </div>
-
-        <ul class="hero-points" aria-label="Early Access focus">
-          <li>EA Free for one shop</li>
-          <li>Standard planned for local mobile tools and invoice OCR</li>
-        </ul>
-      </div>
-
-      <div class="hero-visual">
-        <aside class="hero-card" aria-label="Product summary">
-          <img
-            class="hero-screenshot"
-            src="assets/stockmate-dashboard.png"
-            alt="All-G StockMate dashboard showing inventory status, deliveries and expiry information"
-          />
-        </aside>
       </div>
     </section>
 
-    <section class="section problem" id="problem">
+    <!-- Actual product screenshot, not fabricated metrics -->
+    <!-- Editorial 4.2.3: a real product explanation, not a fabricated app screenshot. -->
+    <section class="editorial-product-section editorial-product-expanded" id="product" aria-labelledby="product-preview-title">
+      <div class="editorial-product-copy">
+        <p class="editorial-section-overline">02 / THE PRODUCT AT WORK</p>
+        <h2 id="product-preview-title">An interface that <em>stays out of your way.</em></h2>
+        <p class="editorial-product-lead">One clear space for products, deliveries, batches and stock levels. Without a heavyweight ERP and without scattering essential information across spreadsheets.</p>
+        <p class="editorial-product-detail">StockMate connects each product record to what happens next: receiving deliveries, checking expiry dates, tracking stock movements and carrying out stocktakes.</p>
+        <a class="editorial-product-textlink" href="#features">Explore the features <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="editorial-product-visual" role="group" aria-label="How information connects in StockMate">
+        <div class="editorial-flow-head">
+          <span class="editorial-flow-overline">ALL-G STOCKMATE / PRODUCT FLOW</span>
+          <span class="editorial-flow-minisymbol" aria-hidden="true">01 — 03</span>
+        </div>
+        <p class="editorial-flow-title">FROM PRODUCT TO STOCK CONTROL</p>
+        <ol class="editorial-flow-steps">
+          <li class="editorial-flow-step">
+            <span class="editorial-flow-num">01</span>
+            <div><h3>Products</h3><p>Names, categories, EAN/GTIN and key details.</p></div>
+            <span class="editorial-flow-icon" aria-hidden="true">▦</span>
+          </li>
+          <li class="editorial-flow-step">
+            <span class="editorial-flow-num">02</span>
+            <div><h3>Deliveries & batches</h3><p>Received stock, quantities and expiry dates.</p></div>
+            <span class="editorial-flow-icon" aria-hidden="true">◫</span>
+          </li>
+          <li class="editorial-flow-step">
+            <span class="editorial-flow-num">03</span>
+            <div><h3>Stock control</h3><p>Movements, shortages and stocktaking.</p></div>
+            <span class="editorial-flow-icon" aria-hidden="true">↗</span>
+          </li>
+        </ol>
+        <div class="editorial-flow-end"><span class="editorial-flow-dot" aria-hidden="true"></span>A single, ordered workflow. No scattered records.</div>
+        <p class="editorial-flow-disclaimer">Functional overview, not a screenshot of the application.</p>
+      </div>
+      <div class="editorial-product-bottom" aria-labelledby="editorial-product-benefits">
+        <div class="editorial-product-bottom-title"><span>STOCKMATE / 04</span><h3 id="editorial-product-benefits">In practice</h3></div>
+        <div class="editorial-product-benefits">
+          <div><span class="editorial-benefit-num">01</span><h4>Clear product records</h4><p>Products and supplier information together.</p></div>
+          <div><span class="editorial-benefit-num">02</span><h4>Expiry dates in context</h4><p>Dates recorded against the relevant batch.</p></div>
+          <div><span class="editorial-benefit-num">03</span><h4>Movement & stocktaking</h4><p>A clearer view of actual stock.</p></div>
+          <div><span class="editorial-benefit-num">04</span><h4>CSV import & export</h4><p>Keep your data portable.</p></div>
+        </div>
+      </div>
+    </section>
+<section class="section problem" id="problem">
       <div class="problem-showcase">
         <div class="problem-showcase-copy">
           <p class="eyebrow">Who it’s for</p>
@@ -251,7 +319,7 @@
             <li>Settings and local backups</li>
             <li>Local-first data storage</li>
           </ul>
-          <a class="button primary version-card-download" href="https://downloads.allgstockmate.com/releases/0.9.0-ea.4/All-G-StockMate-v0.9.0-ea.4-windows-x64.zip" data-download-location="versions-free-card">Download Free</a>
+          <a class="button primary version-card-download" href="https://github.com/klasaolga/All-G_StockMate_inventory-app/releases/download/v0.9.0-ea.5/All-G-StockMate-0.9.0-ea.5-windows-x64.zip" data-download-location="versions-free-card">Download Free</a>
         </article>
 
         <article class="version-card standard-card">
@@ -361,7 +429,7 @@
             </div>
             <div class="release-metadata-row">
               <dt>Version</dt>
-              <dd data-release-version>0.9.0-ea.4</dd>
+              <dd data-release-version>0.9.0-ea.5</dd>
             </div>
             <div class="release-metadata-row">
               <dt>
@@ -378,11 +446,11 @@
             </div>
             <div class="release-metadata-row">
               <dt>File size</dt>
-              <dd data-release-file-size>18.30 MiB</dd>
+              <dd data-release-file-size>705.38 MiB</dd>
             </div>
             <div class="release-metadata-row">
               <dt>SHA-256</dt>
-              <dd class="release-sha256" data-release-sha256>E2F58EAED0F7CE6035A366E40009F291FF49F3C569A70F822AA5ABFDE42E4610</dd>
+              <dd class="release-sha256" data-release-sha256>0EFB450E141851BED0A9F63246D0E63ED65C0FFB7A1BE9E7EAC7B0AC8BFEF293</dd>
             </div>
           </dl>
 
@@ -390,7 +458,7 @@
             class="button primary release-button"
             data-release-action
             data-download-location="release-section"
-            href="https://downloads.allgstockmate.com/releases/0.9.0-ea.4/All-G-StockMate-v0.9.0-ea.4-windows-x64.zip"
+            href="https://github.com/klasaolga/All-G_StockMate_inventory-app/releases/download/v0.9.0-ea.5/All-G-StockMate-0.9.0-ea.5-windows-x64.zip"
           >
             Download Free
           </a>
@@ -404,12 +472,12 @@
     <section class="section updates-preview" aria-labelledby="latest-updates-heading">
       <div class="updates-heading-row">
         <div class="section-heading">
-          <p class="eyebrow">Product updates</p>
+          <p class="eyebrow">StockMate news</p>
           <h2 id="latest-updates-heading">Latest from StockMate.</h2>
         </div>
 
         <a class="updates-view-all" href="/updates/">
-          View all updates <span aria-hidden="true">→</span>
+          View all news <span aria-hidden="true">→</span>
         </a>
       </div>
 
@@ -425,7 +493,7 @@
             transaction handling, cleanup, and predictable behaviour when something fails.
           </p>
           <a class="update-link" href="/updates/reliability-first/">
-            Read update <span aria-hidden="true">→</span>
+            Read more <span aria-hidden="true">→</span>
           </a>
         </article>
 
@@ -440,7 +508,7 @@
             for stock checks, barcode scanning, product work, and invoice workflows.
           </p>
           <a class="update-link" href="/updates/android-standard-roadmap/">
-            Read update <span aria-hidden="true">→</span>
+            Read more <span aria-hidden="true">→</span>
           </a>
         </article>
 
@@ -528,7 +596,7 @@
     <section class="section final-cta">
       <h2>Download Early Access Free for Windows.</h2>
       <p>Use All-G StockMate locally without an account.</p>
-      <a class="button primary" data-download-location="final-cta" href="https://downloads.allgstockmate.com/releases/0.9.0-ea.4/All-G-StockMate-v0.9.0-ea.4-windows-x64.zip">Download Free</a>
+      <a class="button primary" data-download-location="final-cta" href="https://github.com/klasaolga/All-G_StockMate_inventory-app/releases/download/v0.9.0-ea.5/All-G-StockMate-0.9.0-ea.5-windows-x64.zip">Download Free</a>
     </section>
   </main>
 
@@ -545,7 +613,7 @@
         <a href="/privacy/">Privacy</a>
         <a href="/terms/">Terms</a>
         <a href="/early-access-privacy/">Early Access privacy</a>
-        <a href="/updates/">Updates</a>
+        <a href="/updates/">News</a>
         <a href="/feedback">Send feedback</a>
       </nav>
       <p class="footer-line">&copy; 2026 All-G Solutions</p>

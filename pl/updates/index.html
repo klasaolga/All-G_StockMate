@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aktualizacje | All-G StockMate</title>
+  <title>Aktualności | All-G StockMate</title>
   <meta
     name="description"
-    content="Informacje o wydaniach, postępach prac i planach rozwoju All-G StockMate."
+    content="Aktualności, premiery, informacje o rozwoju i inne wiadomości od All-G StockMate."
   />
-  <meta property="og:title" content="Aktualizacje | All-G StockMate" />
+  <meta property="og:title" content="Aktualności | All-G StockMate" />
   <meta
     property="og:description"
-    content="Informacje o wydaniach, postępach prac i planach rozwoju All-G StockMate."
+    content="Aktualności, premiery, informacje o rozwoju i inne wiadomości od All-G StockMate."
   />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="All-G StockMate" />
@@ -26,14 +26,18 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/editorial-site.css" />
 </head>
-<body>
+<body class="site-editorial">
   <a class="skip-link" href="#main">Przejdź do treści</a>
 
   <header class="site-header">
     <a class="brand" href="/pl/" aria-label="Strona główna All-G StockMate">
-      <img class="brand-icon" src="/assets/brand-icon-cubes.png" width="32" height="32" alt="" aria-hidden="true" />
-      <span class="brand-name">All-G <strong>StockMate</strong></span>
+      <img class="editorial-header-symbol" src="/assets/stockmate-brand-symbol-editorial.png" width="66" height="40" alt="" />
+      <span class="editorial-header-wordmark">
+        <span class="editorial-header-name">All-G StockMate</span>
+        <span class="editorial-header-tagline">INVENTORY &amp; STOCK CONTROL</span>
+      </span>
     </a>
 
     <button
@@ -47,21 +51,23 @@
     </button>
 
     <nav id="main-navigation" class="main-nav" aria-label="Nawigacja główna">
+      <a href="/pl/#product">Produkt</a>
       <a href="/pl/#problem">Dla kogo</a>
       <a href="/pl/#features">Funkcje</a>
       <a href="/pl/#versions">Wersje</a>
       <a href="/pl/#early-access">Early Access</a>
-      <a href="/pl/updates/" aria-current="page">Aktualizacje</a>
       <a href="/pl/#faq">FAQ</a>
+      <a href="/pl/updates/" aria-current="page">Aktualności</a>
       <a href="/updates/" lang="en" hreflang="en">EN</a>
     </nav>
+    <a class="editorial-header-release" href="/pl/updates/early-access-release-milestone/">Aktualne wydanie <span aria-hidden="true">↗</span></a>
   </header>
 
   <main id="main" class="updates-main">
     <section class="section updates-page">
       <header class="updates-page-header">
         <p class="eyebrow">All-G StockMate</p>
-        <h1>Aktualizacje</h1>
+        <h1>Aktualności</h1>
         <p class="updates-lead">
           Co się zmieniło, co planujemy i co obecnie poprawiamy.
           Krótko: konkretne informacje o produkcie, bez korporacyjnej mgły.
@@ -81,7 +87,7 @@
             podpisanie artefaktu Android oraz kontrolę sum wydania.
           </p>
           <a class="update-link" href="/pl/updates/early-access-release-milestone/">
-            Czytaj aktualizację <span aria-hidden="true">&rarr;</span>
+            Czytaj więcej <span aria-hidden="true">&rarr;</span>
           </a>
         </article>
 
@@ -96,7 +102,7 @@
             wersji roboczych faktur, walidacji, uporz&#261;dkowanych danych i zaplecza, kt&#243;re &#322;&#261;czy te elementy.
           </p>
           <a class="update-link" href="/pl/updates/ea-standard-development-update/">
-            Czytaj aktualizacj&#281; <span aria-hidden="true">&rarr;</span>
+            Czytaj więcej <span aria-hidden="true">&rarr;</span>
           </a>
         </article>
         <article class="update-card">
@@ -110,7 +116,7 @@
             przechodząc do pracy z produktami, kodami kreskowymi i lokalizacjami.
           </p>
           <a class="update-link" href="/pl/updates/android-real-inventory-workflows/">
-            Czytaj aktualizację <span aria-hidden="true">→</span>
+            Czytaj więcej <span aria-hidden="true">→</span>
           </a>
         </article>
 
@@ -125,7 +131,7 @@
             bezpieczniejszym zapisie, czystszym wycofywaniu transakcji i mniejszej liczbie dziwnych stanów po błędach.
           </p>
           <a class="update-link" href="/pl/updates/reliability-first/">
-            Czytaj aktualizację <span aria-hidden="true">→</span>
+            Czytaj więcej <span aria-hidden="true">→</span>
           </a>
         </article>
 
@@ -140,7 +146,7 @@
             do sprawdzania stanów, skanowania kodów kreskowych, pracy z produktami i obsługi faktur.
           </p>
           <a class="update-link" href="/pl/updates/android-standard-roadmap/">
-            Czytaj aktualizację <span aria-hidden="true">→</span>
+            Czytaj więcej <span aria-hidden="true">→</span>
           </a>
         </article>
 
@@ -171,9 +177,9 @@
       <p class="footer-line">All-G StockMate od All-G Solutions</p>
       <p class="footer-line">Szczecin, Polska</p>
       <p class="footer-status">Status: Early Access / w trakcie rozwoju</p>
-      <nav class="footer-links" aria-label="Prywatność, aktualizacje i opinie">
+      <nav class="footer-links" aria-label="Prywatność, aktualności i opinie">
         <a href="/early-access-privacy/">Prywatność Early Access</a>
-        <a href="/pl/updates/">Aktualizacje</a>
+        <a href="/pl/updates/">Aktualności</a>
         <a href="/feedback">Wyślij opinię</a>
       </nav>
       <p class="footer-line">&copy; 2026 All-G Solutions</p>
