@@ -26,14 +26,18 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/editorial-site.css" />
 </head>
-<body>
+<body class="site-editorial">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <a class="brand" href="/" aria-label="All-G StockMate home">
-      <img class="brand-icon" src="/assets/brand-icon-cubes.png" width="32" height="32" alt="" aria-hidden="true" />
-      <span class="brand-name">All-G <strong>StockMate</strong></span>
+      <img class="editorial-header-symbol" src="/assets/stockmate-brand-symbol-editorial.png" width="66" height="40" alt="" />
+      <span class="editorial-header-wordmark">
+        <span class="editorial-header-name">All-G StockMate</span>
+        <span class="editorial-header-tagline">INVENTORY &amp; STOCK CONTROL</span>
+      </span>
     </a>
 
     <button
@@ -47,19 +51,21 @@
     </button>
 
     <nav id="main-navigation" class="main-nav" aria-label="Main navigation">
+      <a href="/#product">Product</a>
       <a href="/#problem">Who it’s for</a>
       <a href="/#features">Features</a>
       <a href="/#versions">Versions</a>
       <a href="/#early-access">Early Access</a>
-      <a href="/updates/" aria-current="page">Updates</a>
       <a href="/#faq">FAQ</a>
+      <a href="/updates/" aria-current="page">News</a>
       <a href="/pl/updates/early-access-free-windows/" lang="pl" hreflang="pl">PL</a>
     </nav>
+    <a class="editorial-header-release" href="/updates/early-access-release-milestone/">Current release <span aria-hidden="true">↗</span></a>
   </header>
 
   <main id="main">
     <article class="section update-article">
-      <a class="article-back" href="/updates/">← All updates</a>
+      <a class="article-back" href="/updates/">← All news</a>
 
       <header class="update-article-header">
         <div class="update-meta">
@@ -182,9 +188,9 @@
       <p class="footer-line">All-G StockMate by All-G Solutions</p>
       <p class="footer-line">Szczecin, Poland</p>
       <p class="footer-status">Status: Early Access / In development</p>
-      <nav class="footer-links" aria-label="Privacy, updates and feedback">
+      <nav class="footer-links" aria-label="Privacy, news and feedback">
         <a href="/early-access-privacy/">Early Access privacy</a>
-        <a href="/updates/">Updates</a>
+        <a href="/updates/">News</a>
         <a href="/feedback">Send feedback</a>
       </nav>
       <p class="footer-line">&copy; 2026 All-G Solutions</p>
