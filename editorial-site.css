@@ -270,17 +270,70 @@ body.site-editorial.page-home #versions .later-card .version-status {
   background:transparent;border-color:#c4cfdb;
 }
 
-/* Home section 06: honest, readable release metadata with cohesive styling. */
+/* Home section 06: editorial introduction alongside the current release. */
 body.site-editorial.page-home #early-access {
-  padding-inline:clamp(26px,4vw,62px);border:1px solid #d8e2ed;
-  border-radius:30px;background:#fff;
-  box-shadow:0 25px 65px rgba(19,34,53,.06);
-  margin-top:55px;margin-bottom:55px;
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:32px clamp(36px,6vw,88px);align-items:start;
+  padding-inline:0;border:0;border-radius:0;background:transparent;
+  box-shadow:none;margin-block:0;
 }
+body.site-editorial.page-home #early-access .section-heading {grid-column:1;grid-row:1;margin:0;max-width:none;}
+body.site-editorial.page-home #early-access .eyebrow {color:#52677d;}
 body.site-editorial.page-home #early-access h2 {font-size:clamp(36px,3.65vw,59px);}
-body.site-editorial.page-home .early-access-status-card {border-radius:24px;box-shadow:none;background:#f5f8fb;}
-body.site-editorial.page-home .release-metadata-row {border-color:#dae3ec;}
-body.site-editorial.page-home #early-access .button {border-radius:100px;}
+body.site-editorial.page-home #early-access .form-layout {display:contents;}
+body.site-editorial.page-home #early-access .early-access-copy {
+  grid-column:1;grid-row:2;min-width:0;gap:22px;
+}
+body.site-editorial.page-home #early-access .early-access-copy>p {color:#52677d;font-size:16px;line-height:1.9;}
+body.site-editorial.page-home #early-access .next-steps {
+  margin-top:14px;padding:0;border:0;border-radius:0;background:transparent;
+}
+body.site-editorial.page-home #early-access .next-steps h3 {font-size:24px;line-height:1.3;margin-bottom:24px;}
+body.site-editorial.page-home #early-access .release-flow {
+  display:block;list-style:decimal-leading-zero;padding-left:30px;color:#52677d;
+}
+body.site-editorial.page-home #early-access .release-flow li {
+  padding:17px 0 17px 12px;border-top:1px solid #c4cfdb;font-size:15px;line-height:1.8;
+}
+body.site-editorial.page-home #early-access .release-flow li::marker {
+  color:#52677d;font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;
+}
+body.site-editorial.page-home #early-access .early-access-status-card {
+  grid-column:2;grid-row:1 / span 2;min-width:0;width:100%;gap:24px;
+  padding:clamp(24px,3vw,42px);border:1px solid #34445a;
+  border-radius:20px;box-shadow:none;background:#0e192a;color:#f5f8fc;
+}
+body.site-editorial.page-home #early-access .release-card-heading {grid-template-columns:22px minmax(0,1fr);gap:14px;}
+body.site-editorial.page-home #early-access .release-card-heading .feature-icon {
+  width:22px;height:22px;margin-top:8px;background:transparent;color:#90c1f3;
+}
+body.site-editorial.page-home #early-access .release-card-heading h3 {
+  color:#f5f8fc;font-size:clamp(28px,2.4vw,36px);line-height:1.2;margin:0;
+}
+body.site-editorial.page-home #early-access .early-access-status-card p {color:#becbd9;font-size:14px;line-height:1.8;}
+body.site-editorial.page-home #early-access .release-summary {margin-top:12px;}
+body.site-editorial.page-home #early-access .release-metadata {margin:0;border-color:#34445a;}
+body.site-editorial.page-home #early-access .release-metadata-row {
+  grid-template-columns:minmax(0,.65fr) minmax(0,1fr);gap:14px;padding:15px 0;border-color:#34445a;
+}
+body.site-editorial.page-home #early-access .release-metadata dt {color:#becbd9;font-size:10px;letter-spacing:.08em;gap:8px;}
+body.site-editorial.page-home #early-access .release-metadata-icon {width:18px;height:18px;background:transparent;color:#90c1f3;}
+body.site-editorial.page-home #early-access .release-metadata dd {color:#f3f6fa;font-size:14px;font-weight:600;overflow-wrap:anywhere;}
+body.site-editorial.page-home #early-access .release-metadata [data-release-version] {font-size:25px;letter-spacing:-.04em;}
+body.site-editorial.page-home #early-access .early-access-status-card .status-badge.available {
+  background:#17283f;color:#b8d8fa;border:1px solid #34445a;border-radius:5px;font-size:12px;
+}
+body.site-editorial.page-home #early-access .release-metadata-row:has([data-release-sha256]) {grid-template-columns:1fr;gap:8px;}
+body.site-editorial.page-home #early-access .release-metadata .release-sha256 {
+  font-size:13px;line-height:1.9;font-weight:500;white-space:normal;overflow:visible;text-overflow:clip;word-break:break-word;
+}
+body.site-editorial.page-home #early-access .button {border-radius:100px;min-height:48px;padding:14px 20px;font-size:14px;box-shadow:none;}
+body.site-editorial.page-home #early-access .release-notes {margin:0;}
+body.site-editorial.page-home #early-access .release-notes a {color:#90c1f3;font-size:13px;text-underline-offset:4px;}
+@media(max-width:900px) {
+  body.site-editorial.page-home #early-access {grid-template-columns:1fr;gap:28px;}
+  body.site-editorial.page-home #early-access .early-access-status-card {grid-column:1;grid-row:3;margin-top:8px;}
+}
 
 /* Home sections 07/08: the updates cards and FAQs follow the same typographic system. */
 body.site-editorial.page-home #latest-updates,
@@ -462,7 +515,7 @@ body.site-editorial .legal-content p,body.site-editorial .legal-content li {line
   body.site-editorial.page-home #features .feature-grid {grid-template-columns:1fr;gap:0;margin-top:40px;}
   body.site-editorial.page-home #features .feature-card {padding:28px 0 32px;column-gap:12px;}
   body.site-editorial.page-home #versions .version-grid {grid-template-columns:1fr;gap:32px;}
-  body.site-editorial.page-home #early-access {margin-top:24px;margin-bottom:24px;padding-inline:20px;}
+  body.site-editorial.page-home #early-access {margin-block:24px;padding-inline:0;}
   body.site-editorial.page-home .editorial-product-section {padding:60px 0;}
   body.site-editorial.page-home .editorial-product-copy h2 {font-size:clamp(40px,10vw,55px);}
   body.site-editorial .updates-page {width:calc(100% - 28px);padding:22px 0 45px;}
