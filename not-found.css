@@ -1,0 +1,205 @@
+/* ==========================================================================
+   All-G StockMate — Dedicated 404 Error Page Styles (Isolated)
+   ========================================================================== */
+
+.not-found-main {
+  min-height: calc(100vh - 280px);
+  padding: 5rem 1.5rem 6rem;
+  background-color: var(--ed-bg, #fbfbfa);
+  color: var(--ed-text, #0f172a);
+}
+
+.not-found-container {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.not-found-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.35rem 0.85rem;
+  background-color: rgba(20, 105, 216, 0.08);
+  border: 1px solid rgba(20, 105, 216, 0.2);
+  border-radius: 9999px;
+  margin-bottom: 2rem;
+}
+
+.not-found-code {
+  font-family: var(--ed-sans, 'Manrope', system-ui, sans-serif);
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: #1469d8;
+  letter-spacing: 0.05em;
+}
+
+.not-found-status {
+  font-family: var(--ed-sans, 'Manrope', system-ui, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--ed-text-muted, #475569);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.not-found-title {
+  font-family: var(--ed-serif, 'Instrument Serif', Georgia, serif);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--ed-navy, #0b1726);
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.not-found-lead {
+  font-family: var(--ed-sans, 'Manrope', system-ui, sans-serif);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--ed-text-muted, #475569);
+  max-width: 680px;
+  margin: 0 0 2.5rem 0;
+}
+
+.not-found-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.not-found-actions .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.75rem;
+  font-family: var(--ed-sans, 'Manrope', system-ui, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+  min-height: 48px;
+}
+
+.not-found-actions .button.primary {
+  background-color: #1469d8;
+  color: #ffffff;
+  border: 1px solid #1469d8;
+}
+
+.not-found-actions .button.primary:hover {
+  background-color: #0f52ab;
+  border-color: #0f52ab;
+  transform: translateY(-1px);
+}
+
+.not-found-actions .button.secondary {
+  background-color: transparent;
+  color: var(--ed-navy, #0b1726);
+  border: 1px solid rgba(11, 23, 38, 0.25);
+}
+
+.not-found-actions .button.secondary:hover {
+  background-color: rgba(11, 23, 38, 0.04);
+  border-color: var(--ed-navy, #0b1726);
+  transform: translateY(-1px);
+}
+
+.not-found-directory {
+  border-top: 1px solid rgba(11, 23, 38, 0.1);
+  padding-top: 3rem;
+}
+
+.not-found-directory-heading {
+  font-family: var(--ed-sans, 'Manrope', system-ui, sans-serif);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ed-text-muted, #64748b);
+  margin: 0 0 1.5rem 0;
+}
+
+.not-found-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.not-found-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid rgba(11, 23, 38, 0.08);
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.not-found-card:hover {
+  border-color: rgba(20, 105, 216, 0.35);
+  box-shadow: 0 4px 12px rgba(11, 23, 38, 0.04);
+  transform: translateY(-2px);
+}
+
+.not-found-card:focus-visible {
+  outline: 2px solid #1469d8;
+  outline-offset: 3px;
+}
+
+.not-found-card-kicker {
+  font-family: var(--ed-sans, 'Manrope', system-ui, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #1469d8;
+  margin-bottom: 0.5rem;
+}
+
+.not-found-card-title {
+  font-family: var(--ed-sans, 'Manrope', system-ui, sans-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ed-navy, #0b1726);
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.not-found-card-arrow {
+  color: #1469d8;
+  transition: transform 0.2s ease;
+}
+
+.not-found-card:hover .not-found-card-arrow {
+  transform: translateX(4px);
+}
+
+.not-found-card-desc {
+  font-family: var(--ed-sans, 'Manrope', system-ui, sans-serif);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--ed-text-muted, #64748b);
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .not-found-main {
+    padding: 3.5rem 1.25rem 4.5rem;
+  }
+  .not-found-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+  }
+  .not-found-actions .button {
+    width: 100%;
+  }
+}
