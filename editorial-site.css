@@ -163,6 +163,10 @@ body.site-editorial.page-home #faq .eyebrow {
   color:#6887a9;font:800 11px/1.6 var(--ed-sans);letter-spacing:.15em;
 }
 body.site-editorial.page-home #problem .problem-showcase-copy>p {color:#586c80;line-height:1.87;}
+body.site-editorial.page-home #problem .problem-showcase-copy>h2+p {margin-top:16px;}
+@media (min-width: 901px) {
+  body.site-editorial.page-home #problem .daily-mess-card {align-self:end;}
+}
 body.site-editorial.page-home #problem .problem-snapshot,
 body.site-editorial.page-home #problem .problem-showcase-side {
   border-radius:23px;background:#f9fbfd;border:1px solid #dbe5ee;box-shadow:none;
