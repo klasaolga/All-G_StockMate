@@ -19,17 +19,20 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="All-G StockMate" />
 
-  <link rel="canonical" href="https://allgstockmate.com/early-access-privacy/" />
+    <link rel="canonical" href="https://allgstockmate.com/early-access-privacy/" />
+  <link rel="alternate" hreflang="en" href="https://allgstockmate.com/early-access-privacy/" />
+  <link rel="alternate" hreflang="pl" href="https://allgstockmate.com/pl/early-access-privacy/" />
+  <link rel="alternate" hreflang="x-default" href="https://allgstockmate.com/early-access-privacy/" />
 
   <meta name="theme-color" content="#1469d8" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png" />
-  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
-  <link rel="shortcut icon" href="../favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="privacy.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/legal.css" />
   <link rel="stylesheet" href="/editorial-site.css" />
 </head>
 
@@ -37,7 +40,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <a class="brand" href="../" aria-label="All-G StockMate home">
+    <a class="brand" href="/" aria-label="All-G StockMate home">
       <img class="editorial-header-symbol" src="/assets/stockmate-brand-symbol-editorial.png" width="66" height="40" alt="" />
       <span class="editorial-header-wordmark">
         <span class="editorial-header-name">All-G StockMate</span>
@@ -45,10 +48,21 @@
       </span>
     </a>
 
-    <nav class="main-nav" aria-label="Page navigation">
-      <a href="../">Home</a>
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="main-navigation"
+    >
+      <span>Menu</span>
+      <span class="nav-toggle-icon" aria-hidden="true"></span>
+    </button>
+
+    <nav id="main-navigation" class="main-nav" aria-label="Main navigation">
+      <a href="/">Home</a>
       <a href="/#product">Product</a>
-      <a href="../#early-access">Early Access</a>
+      <a href="/#early-access">Early Access</a>
+      <a href="/pl/early-access-privacy/" lang="pl" hreflang="pl">PL</a>
     </nav>
     <a class="editorial-header-release" href="/updates/early-access-release-milestone/">Current release <span aria-hidden="true">↗</span></a>
   </header>
@@ -62,7 +76,7 @@
         and testing for the All-G StockMate Early Access programme.
       </p>
       <p class="legal-updated">
-        Last updated: <time datetime="2026-07-23">23 July 2026</time>
+        Last updated: <time datetime="2026-10-13">13 October 2026</time>
       </p>
     </header>
 
@@ -72,12 +86,16 @@
 
         <p>
           The controller of your personal data is
-          <strong>All-G Solutions</strong>.
+          <strong>Olga Klasa All G Solutions</strong>.<br />
+          Brand: <strong>All-G Solutions</strong><br />
+          Registered Office / Business Address: ul. Stanisława Ignacego Witkiewicza 51 lok. 7, 71-124 Szczecin, Poland<br />
+          Tax Identification Number (NIP): 6731884436
         </p>
 
         <p>
-          You can contact us regarding privacy and personal data matters at:
-          <a href="mailto:contact@allgstockmate.com">contact@allgstockmate.com</a>
+          You can contact us regarding privacy and personal data matters at:<br />
+          General Contact Email: <a href="mailto:contact@allgstockmate.com"><code>contact@allgstockmate.com</code></a><br />
+          Privacy and Support Email: <a href="mailto:support@allgstockmate.com"><code>support@allgstockmate.com</code></a>
         </p>
       </section>
 
@@ -279,7 +297,7 @@
     </article>
 
     <p class="legal-back">
-      <a href="../">&larr; Back to All-G StockMate</a>
+      <a href="/">&larr; Back to All-G StockMate</a>
     </p>
   </main>
 
@@ -287,7 +305,7 @@
     <div class="footer-brand">
       <img
         class="footer-logo"
-        src="../assets/logo.png"
+        src="/assets/logo.png"
         alt="All-G StockMate — Inventory & Stock Control"
       />
     </div>
@@ -296,8 +314,17 @@
       <p class="footer-line">All-G StockMate by All-G Solutions</p>
       <p class="footer-line">Szczecin, Poland</p>
       <p class="footer-status">Status: Early Access / In development</p>
+      <nav class="footer-links" aria-label="Privacy and legal links">
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/early-access-privacy/" aria-current="page">Early Access privacy</a>
+        <a href="/updates/">News</a>
+        <a href="/feedback">Send feedback</a>
+      </nav>
       <p class="footer-line">&copy; 2026 All-G Solutions</p>
     </div>
   </footer>
+
+  <script src="/script.js"></script>
 </body>
 </html>
