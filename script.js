@@ -306,3 +306,57 @@ if (navSections.length) {
     });
   });
 }
+
+// === Responsive disclosure for Versions edition feature lists ===
+const initVersionsDetails = () => {
+  const versionDetails = Array.from(
+    document.querySelectorAll("#versions .version-features-details")
+  );
+
+  if (!versionDetails.length) {
+    return;
+  }
+
+  const desktopQuery = window.matchMedia("(min-width: 1100px)");
+
+  // Track explicit user interactions on the summary element (mouse, touch, keyboard)
+  versionDetails.forEach((detail) => {
+    const summary = detail.querySelector("summary");
+    if (!summary) {
+      return;
+    }
+
+    const markUserInteraction = () => {
+      detail.dataset.userToggled = "true";
+    };
+
+    summary.addEventListener("click", markUserInteraction);
+    summary.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        markUserInteraction();
+      }
+    });
+  });
+
+  const applyDisclosureState = (isDesktop) => {
+    versionDetails.forEach((detail) => {
+      if (detail.dataset.userToggled !== "true") {
+        detail.open = isDesktop;
+      }
+    });
+  };
+
+  applyDisclosureState(desktopQuery.matches);
+
+  const handleBreakpointChange = (event) => {
+    applyDisclosureState(event.matches);
+  };
+
+  if (typeof desktopQuery.addEventListener === "function") {
+    desktopQuery.addEventListener("change", handleBreakpointChange);
+  } else if (typeof desktopQuery.addListener === "function") {
+    desktopQuery.addListener(handleBreakpointChange);
+  }
+};
+
+initVersionsDetails();
