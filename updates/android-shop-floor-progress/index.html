@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StockMate Standard: Android moves closer to everyday shop-floor work | All-G StockMate</title>
+  <meta name="description" content="StockMate’s Android client is evolving with mobile inventory workflows, stocktaking improvements and a focus on reliable local operations." />
+  <meta property="og:title" content="StockMate Standard: Android moves closer to everyday shop-floor work" />
+  <meta property="og:description" content="StockMate’s Android client is moving further into everyday inventory work, with continued progress on stocktaking, local workflows and operational reliability." />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="All-G StockMate" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="canonical" href="https://allgstockmate.com/updates/android-shop-floor-progress/" />
+  <link rel="alternate" hreflang="en" href="https://allgstockmate.com/updates/android-shop-floor-progress/" />
+  <link rel="alternate" hreflang="pl" href="https://allgstockmate.com/pl/updates/android-shop-floor-progress/" />
+  <link rel="alternate" hreflang="x-default" href="https://allgstockmate.com/updates/android-shop-floor-progress/" />
+  <meta name="theme-color" content="#1469d8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .android-inline-visual {
+      float: right;
+      width: clamp(230px, 29vw, 350px);
+      margin: -1.5rem clamp(-8rem, -9vw, -2.5rem) 1rem 1.6rem;
+      pointer-events: none;
+    }
+
+    .android-inline-visual img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 1200px) {
+      .android-inline-visual {
+        width: clamp(220px, 30vw, 310px);
+        margin-right: clamp(-3rem, -5vw, -1rem);
+      }
+    }
+
+    @media (max-width: 860px) {
+      .android-inline-visual {
+        float: none;
+        width: min(82%, 340px);
+        margin: 1rem auto 1.25rem;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="/editorial-site.css" />
+  <!-- stockmate-news-rhythm-fix1: scoped to this news article only -->
+  <style id="stockmate-news-rhythm-fix1">
+    body.site-editorial.stockmate-news-rhythm-fix1 .update-article .update-article-body {
+      width: 100%;
+      max-width: 760px;
+      text-align: left;
+      line-height: 1.70;
+    }
+    body.site-editorial.stockmate-news-rhythm-fix1 .update-article .update-article-body > p {
+      margin-bottom: 1.06em;
+      line-height: 1.70;
+      text-align: left;
+    }
+    body.site-editorial.stockmate-news-rhythm-fix1 .update-article .update-article-body > h2 {
+      margin-top: 2em;
+      margin-bottom: 0.72em;
+      padding-top: 1.0em;
+    }
+    body.site-editorial.stockmate-news-rhythm-fix1 .update-article .update-article-body > h2:first-of-type {
+      margin-top: 1.1em;
+      padding-top: 0;
+    }
+    /* The site-wide editorial stylesheet resets floats with !important.
+       This more specific rule restores wrap ONLY for this new article. */
+    body.site-editorial.stockmate-news-rhythm-fix1 .update-article .update-article-body .android-inline-visual {
+      float: right !important;
+      clear: none !important;
+      display: block !important;
+      box-sizing: border-box;
+      width: min(39%, 310px) !important;
+      max-width: 310px !important;
+      margin: 0 0 0.85rem 1.55rem !important;
+      pointer-events: none;
+    }
+    body.site-editorial.stockmate-news-rhythm-fix1 .update-article .android-inline-visual img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    body.site-editorial.stockmate-news-rhythm-fix1 .update-article .update-article-body::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    @media (max-width: 760px) {
+      body.site-editorial.stockmate-news-rhythm-fix1 .update-article .update-article-body {
+        max-width: 100%;
+      }
+      body.site-editorial.stockmate-news-rhythm-fix1 .update-article .update-article-body .android-inline-visual {
+        float: none !important;
+        clear: both !important;
+        width: min(85%, 330px) !important;
+        max-width: 100% !important;
+        margin: 0.6rem auto 1.25rem !important;
+      }
+      body.site-editorial.stockmate-news-rhythm-fix1 .update-article .update-article-body > p {
+        line-height: 1.68;
+        margin-bottom: 1.0em;
+      }
+    }
+  </style>
+</head>
+<body class="site-editorial stockmate-news-rhythm-fix1">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="All-G StockMate home">
+      <img class="editorial-header-symbol" src="/assets/stockmate-brand-symbol-editorial.png" width="66" height="40" alt="" />
+      <span class="editorial-header-wordmark">
+        <span class="editorial-header-name">All-G StockMate</span>
+        <span class="editorial-header-tagline">INVENTORY &amp; STOCK CONTROL</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+      <span>Menu</span>
+      <span class="nav-toggle-icon" aria-hidden="true"></span>
+    </button>
+
+    <nav id="main-navigation" class="main-nav" aria-label="Main navigation">
+      <a href="/#product">Product</a>
+      <a href="/#problem">Who it’s for</a>
+      <a href="/#features">Features</a>
+      <a href="/#versions">Versions</a>
+      <a href="/#early-access">Early Access</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/updates/" aria-current="page">News</a>
+      <a href="/pl/updates/android-shop-floor-progress/" lang="pl" hreflang="pl">PL</a>
+    </nav>
+    <a class="editorial-header-release" href="/updates/early-access-release-milestone/">Current release <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+    <article class="section update-article android-workflows-update">
+      <a class="article-back" href="/updates/">← All news</a>
+
+      <header class="update-article-header">
+        <div class="update-meta">
+          <span class="update-type">Development</span>
+          <time datetime="2026-11-15">15 Nov 2026</time>
+        </div>
+
+        <h1>StockMate Standard: Android moves closer to everyday shop-floor work</h1>
+
+        <p class="update-article-lead">Stock management doesn’t happen only behind a desk. It happens between shelves, during deliveries, while checking products, and when counting stock. That’s why we’re continuing to expand All-G StockMate’s Android application, bringing more everyday inventory operations into a mobile workflow.</p>
+      </header>
+
+      <div class="update-article-body">
+        <p>Recent development has moved beyond basic connectivity and product lookup. We’re integrating and testing more of the operations that make a mobile inventory application genuinely useful in a small shop.</p>
+
+        <h2>More than a barcode scanner</h2>
+
+        <figure class="android-inline-visual" aria-hidden="true">
+          <img src="/assets/stockmate-android-shop-floor-nov-2026.png" width="1218" height="1292" loading="lazy" decoding="async" alt="" />
+        </figure>
+
+                <p>The goal for StockMate on Android is not simply to scan a barcode and send the result to a computer. We’re building a full mobile client designed to support the inventory tasks available in each StockMate edition, with an interface suited to working on a phone.</p>
+
+        <p>Recent work has expanded the foundations for managing products and carrying out stocktakes. This includes further integration of operations on counted inventory items and safeguards that help keep mobile actions consistent with the main inventory system. These are meaningful development milestones, although not every operation has a finished user interface yet.</p>
+
+        <p>The practical goal is straightforward: make it easier to check information, work with products, and carry out stocktakes where the stock actually is.</p>
+
+        <h2>One inventory system. Two ways to work.</h2>
+
+                <p>StockMate follows an offline-first approach. The Windows application remains the central local system, while the Android client is being developed to communicate with it over a local Wi-Fi network.</p>
+
+        <p>Both applications are intended to work with the same authoritative inventory data, rather than maintaining separate, potentially conflicting stock records. This means the shop’s everyday inventory workflow does not need to depend on a cloud account or a continuously available internet connection.</p>
+
+        <p>The aim is to combine the convenience of mobile work with the control of a locally managed inventory system.</p>
+
+        <h2>Reliability matters as much as convenience</h2>
+
+                <p>A mobile inventory application needs to handle more than successful operations. What happens if a connection drops while an action is being processed? What if the application closes unexpectedly? How can the system distinguish between an operation that failed and one that may already have changed the inventory?</p>
+
+        <p>These questions are part of our current development work. We’re extending the mechanisms that protect inventory operations and working on persistent recovery records that will help the application handle interrupted or uncertain actions more safely.</p>
+
+        <p>This recovery work is still undergoing implementation and validation. It is not yet a completed, publicly available feature. Our priority remains the same: inventory data should be predictable and trustworthy, including when something goes wrong.</p>
+
+        <h2>What’s available today, and what comes next?</h2>
+
+                <p><strong>All-G StockMate Early Access Free is already available for Windows.</strong> It provides local inventory management for small shops, including products, stock levels, deliveries, batches, expiry dates, stock movements, stocktaking, and CSV import and export.</p>
+
+        <p>StockMate Standard and the Android application remain in active development. The next stages include completing remaining mobile workflows, improving recovery from interrupted operations, refining the user interface, and carrying out further testing before public distribution. The broader roadmap also includes an Android client for the Free edition, within its own feature scope.</p>
+
+        <p><strong>The Android application is not yet publicly available through Google Play. We are not announcing a release date at this stage.</strong></p>
+
+        <p>We’re building StockMate for the realities of small retail: practical workflows, clear information, and stock records that people can rely on.</p>
+
+        <p><strong>Want to explore StockMate today?</strong></p>
+
+        <div class="update-note">
+          <p><a href="/#early-access">Download Early Access Free for Windows ↗</a></p>
+          <p><em>Built for order. Designed for clarity.</em></p>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img class="footer-logo" src="/assets/logo.png" alt="All-G StockMate — Inventory & Stock Control" />
+    </div>
+
+    <div class="footer-meta">
+      <p class="footer-line">All-G StockMate by All-G Solutions</p>
+      <p class="footer-line">Szczecin, Poland</p>
+      <p class="footer-status">Status: Early Access / In development</p>
+      <nav class="footer-links" aria-label="Privacy, news and feedback">
+        <a href="/early-access-privacy/">Early Access privacy</a>
+        <a href="/updates/">News</a>
+        <a href="/feedback">Send feedback</a>
+      </nav>
+      <p class="footer-line">&copy; 2026 All-G Solutions</p>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
