@@ -1249,6 +1249,59 @@ body.site-editorial .update-article .release-milestone-visual img {
   box-shadow: 0 10px 28px -6px rgba(12, 26, 45, 0.1);
 }
 
+
+/* STOCKMATE_ARTICLE_ILLUSTRATION_FLOW_V1: opt-in only; existing news unchanged */
+/*
+  Add an opt-in class to a figure within .update-article-body:
+    article-illustration--wrap-right  or  article-illustration--wrap-left
+  Legacy illustrations without these classes keep their current block layout.
+  Optional transparent-alpha shape: set --article-illustration-shape to a url(...)
+  pointing at that illustration's transparent PNG, after visual review.
+*/
+body.site-editorial .update-article .update-article-body figure.article-illustration--wrap-right,
+body.site-editorial .update-article .update-article-body figure.article-illustration--wrap-left {
+  display: block !important;
+  clear: none !important;
+  box-sizing: border-box;
+  width: min(39%, 310px) !important;
+  max-width: 310px !important;
+  shape-outside: var(--article-illustration-shape, margin-box);
+  shape-margin: var(--article-illustration-shape-margin, 0px);
+  pointer-events: none;
+}
+body.site-editorial .update-article .update-article-body figure.article-illustration--wrap-right {
+  float: right !important;
+  margin: 0 0 0.85rem 1.55rem !important;
+}
+body.site-editorial .update-article .update-article-body figure.article-illustration--wrap-left {
+  float: left !important;
+  margin: 0 1.55rem 0.85rem 0 !important;
+}
+body.site-editorial .update-article .update-article-body figure.article-illustration--wrap-right img,
+body.site-editorial .update-article .update-article-body figure.article-illustration--wrap-left img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+body.site-editorial .update-article .update-article-body:has(> figure.article-illustration--wrap-right)::after,
+body.site-editorial .update-article .update-article-body:has(> figure.article-illustration--wrap-left)::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+@media (max-width: 760px) {
+  body.site-editorial .update-article .update-article-body figure.article-illustration--wrap-right,
+  body.site-editorial .update-article .update-article-body figure.article-illustration--wrap-left {
+    float: none !important;
+    clear: both !important;
+    width: min(85%, 330px) !important;
+    max-width: 100% !important;
+    margin: 0.6rem auto 1.25rem !important;
+    shape-outside: none;
+  }
+}
+/* END STOCKMATE_ARTICLE_ILLUSTRATION_FLOW_V1 */
+
 @media (max-width: 860px) {
   body.site-editorial .update-article .visual-grid-3,
   body.site-editorial .update-article .visual-flow,
